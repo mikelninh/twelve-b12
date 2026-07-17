@@ -2,12 +2,26 @@
 
 Eine persönliche, redaktionelle Affiliate-Discovery-Seite für vegane Basics — plus der ursprüngliche TWELVE-B12-Pre-Launch-Prototyp.
 
-Die Startseite ist als schneller Instagram-Bio-Funnel optimiert: persönlicher Creator-Kontext, mobile Schnelleinstiege zu B12, Omega-3 und Kreatin, eine kompakte Sticky-Navigation und Social-Preview-Metadaten.
+Die Startseite ist als schneller Instagram-Bio-Funnel optimiert: persönlicher Creator-Kontext, mobile Schnelleinstiege zu B12, Omega-3 und Kreatin, eine kompakte Sticky-Navigation und Social-Preview-Metadaten. Jeder Staple besitzt zusätzlich einen kompakten Guide mit Dosis, Einnahme, Evidenzgrenzen, Sicherheit und verlinkten Originalquellen.
 
 ## Seiten
 
-- `index.html`: STPLS. mit kuratiertem Stack, Filtern und transparenter Affiliate-Logik
+- `index.html`: STPLS. mit kuratiertem Stack, acht Evidenz-Guides, Filtern und transparenter Affiliate-Logik
 - `b12.html`: TWELVE — B12. Erledigt.
+
+## Dosis- und Evidenz-Guides
+
+Die Startseite enthält Guides für:
+
+- Vitamin B12 mit klarer Einordnung von 2,5 / 4 / 10 / 25 / 100 / 500 µg und Erklärung der dosisabhängigen Aufnahme
+- Kreatin mit 3–5-g-Daily-Routine, Loading-Option, Kaufstandard und der wiederentdeckten Brand-DNA von `MYKŌ Ascend`
+- Algen-Omega-3, Vitamin D3, Magnesium, Polyphenol-Olivenöl, funktionale Pilze und Jod
+
+Alle Inhalte trennen einen pragmatischen persönlichen Default von offiziellen Referenzwerten, Sicherheitsgrenzen und therapeutischen Dosierungen. Quellen führen direkt zu DGE, BfR, EFSA, NIH, EU-Recht oder den jeweils genannten Fachpublikationen.
+
+## Kreatin-Archiv
+
+Die aktuelle Kreatin-Einordnung greift die frühere Produktidee `MYKŌ Ascend — The Conscious Athlete's Edge` auf: ein fokussiertes Kernprodukt `Pure Ascend`, 300 g reines veganes Creapure® und 60 Tagesportionen à 5 g. Die Leitidee bleibt: **Not a supplement. A staple.** Das ist im aktuellen Stand Brand-Kontext, kein bereits erhältliches Produkt.
 
 ## Affiliate-Links einsetzen
 

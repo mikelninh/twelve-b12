@@ -182,7 +182,26 @@
     .product-info > p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
     .spec { margin: 21px 0; padding: 13px 0; border-block: 1px solid var(--line); font-size: 11px; line-height: 1.55; }
     .spec b { display: block; margin-bottom: 3px; font: 500 9px "DM Mono", monospace; text-transform: uppercase; color: var(--orange); }
-    .product-info .btn { width: 100%; margin-top: auto; }
+    .product-info .btn { width: 100%; margin-top: 9px; }
+    .guide-button {
+      width: 100%;
+      min-height: 47px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+      padding: 0 17px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      color: var(--ink);
+      background: transparent;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+    .guide-button:hover { transform: translateY(-2px); background: var(--card-color); }
     .affiliate-mark { opacity: .65; }
 
     .manifesto { background: var(--ink); color: white; overflow: hidden; }
@@ -227,6 +246,37 @@
     .modal h3 { margin: 0; font-size: 28px; letter-spacing: -.04em; }
     .modal p { color: var(--muted); line-height: 1.65; font-size: 13px; }
     .close { width: 35px; height: 35px; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 50%; background: transparent; cursor: pointer; }
+    .guide-modal { align-items: flex-start; overflow-y: auto; padding: 34px 20px; }
+    .guide-dialog { width: min(900px, 100%); padding: 0; overflow: hidden; border: 2px solid var(--ink); border-radius: 28px; background: var(--white); box-shadow: 14px 14px 0 var(--acid); }
+    .guide-top { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 17px 22px; border-bottom: 1px solid var(--line); background: rgba(251,252,247,.94); backdrop-filter: blur(12px); }
+    .guide-top span { color: var(--muted); font: 500 9px "DM Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+    .guide-body { padding: 34px; }
+    .guide-heading { display: grid; grid-template-columns: 1fr 260px; gap: 26px; align-items: end; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+    .guide-eyebrow { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+    .guide-pill { display: inline-flex; align-items: center; min-height: 27px; padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .guide-pill.strong { color: white; border-color: var(--ink); background: var(--ink); }
+    .guide-heading h3 { margin: 0; font-size: clamp(40px, 6vw, 68px); line-height: .92; letter-spacing: -.065em; }
+    .guide-intro { margin: 15px 0 0; max-width: 610px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .dose-card { padding: 22px; border: 2px solid var(--ink); border-radius: 20px; background: var(--acid); box-shadow: 7px 7px 0 var(--ink); }
+    .dose-card small { display: block; margin-bottom: 8px; font: 500 8px "DM Mono", monospace; letter-spacing: .07em; text-transform: uppercase; }
+    .dose-card strong { display: block; font-size: 29px; line-height: 1; letter-spacing: -.05em; }
+    .dose-card p { margin: 9px 0 0; color: var(--ink); font-size: 11px; line-height: 1.5; }
+    .guide-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 26px; }
+    .guide-block { padding: 22px; border: 1px solid var(--line); border-radius: 19px; background: white; }
+    .guide-block.wide { grid-column: 1 / -1; }
+    .guide-block h4 { margin: 0 0 10px; font-size: 16px; letter-spacing: -.025em; }
+    .guide-block p, .guide-block li { color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .guide-block p { margin: 0; }
+    .guide-block ul { margin: 0; padding-left: 18px; }
+    .guide-block li + li { margin-top: 6px; }
+    .dose-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    .dose-table th, .dose-table td { padding: 11px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    .dose-table th { color: var(--muted); font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .dose-table tr:last-child td { border-bottom: 0; }
+    .guide-sources { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--line); }
+    .guide-sources strong { display: block; margin-bottom: 10px; font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
+    .guide-sources a { display: inline-block; margin: 0 12px 8px 0; color: var(--purple); font-size: 11px; text-decoration: underline; text-underline-offset: 3px; }
+    .guide-note { margin-top: 16px !important; color: var(--muted) !important; font-size: 10px !important; }
     .mobile-dock { display: none; top: auto; }
 
     @media (max-width: 980px) {
@@ -248,6 +298,9 @@
       .section-head { grid-template-columns: 1fr; gap: 22px; }
       .section-copy { justify-self: start; }
       .product-grid { grid-template-columns: 1fr; }
+      .guide-heading { grid-template-columns: 1fr; }
+      .guide-grid { grid-template-columns: 1fr; }
+      .guide-block.wide { grid-column: auto; }
       .not-list { grid-template-columns: 1fr; }
       .not-card { min-height: 220px; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -274,6 +327,12 @@
       .product-art { min-height: 270px; border-right: 0; border-bottom: 1px solid var(--line); }
       .input-row { flex-direction: column; }
       .input-row .btn { width: 100%; }
+      .guide-modal { padding: 12px; }
+      .guide-dialog { border-radius: 21px; box-shadow: 7px 7px 0 var(--acid); }
+      .guide-body { padding: 24px 18px 28px; }
+      .guide-heading h3 { font-size: 44px; }
+      .dose-card strong { font-size: 25px; }
+      .dose-table { font-size: 10px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -336,7 +395,7 @@
       <div class="wrap">
         <div class="section-head">
           <div><span class="section-no">01 / THE STACK</span><h2>Die guten<br>Dauergäste.</h2></div>
-          <p class="section-copy">Meine Shortlist für den Alltag. Nicht alles ist für jede Person nötig — aber bei jedem Pick steht dabei, warum er hier ist und worauf ich beim Kauf achte.</p>
+          <p class="section-copy">Meine Shortlist für den Alltag. Nicht alles ist für jede Person nötig. Öffne bei jedem Pick „Dosis & Evidenz“ für meine Einordnung, Einnahme, Grenzen und Originalquellen.</p>
         </div>
 
         <div class="filter-row" role="group" aria-label="Produkte filtern">
@@ -354,6 +413,7 @@
               <h3>Vitamin B12</h3>
               <p>Der nicht verhandelbare Teil einer veganen Ernährung. Günstig, simpel und viel zu oft unnötig kompliziert verkauft.</p>
               <div class="spec"><b>Mein Kaufstandard</b>klare Dosierung · Cyanocobalamin oder Methylcobalamin · unabhängige Prüfung bevorzugt</div>
+              <button class="guide-button" type="button" data-guide="b12">Dosis & Aufnahme <span>↗</span></button>
               <a class="btn" href="b12.html">TWELVE ansehen <span class="arrow">→</span></a>
             </div>
           </article>
@@ -365,6 +425,7 @@
               <h3>Algen-Omega-3</h3>
               <p>Direkt aus der Alge statt über den Umweg Fisch. Gehört für mich zu den sinnvollsten veganen Staples.</p>
               <div class="spec"><b>Mein Kaufstandard</b>EPA + DHA klar ausgewiesen · Oxidationsschutz · chargengeprüft · Algenquelle genannt</div>
+              <button class="guide-button" type="button" data-guide="omega3">Dosis & Evidenz <span>↗</span></button>
               <a class="btn affiliate" data-product="omega3" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
@@ -376,6 +437,7 @@
               <h3>Vitamin D3</h3>
               <p>Vor allem im lichtarmen Winter relevant. Dosis und Bedarf sind individueller als Social Media oft suggeriert.</p>
               <div class="spec"><b>Mein Kaufstandard</b>veganes D3 aus Flechten · seriöse Dosis · ölbasierte Form · idealerweise nach Blutwert</div>
+              <button class="guide-button" type="button" data-guide="vitamind">Dosis & Evidenz <span>↗</span></button>
               <a class="btn affiliate" data-product="vitamind" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
@@ -385,8 +447,9 @@
             <div class="product-info">
               <div class="product-meta"><span>04 · täglich</span><span class="rating">● Daily</span></div>
               <h3>Kreatin</h3>
-              <p>Nehme ich täglich. Eines der am besten untersuchten Performance-Supplements — und besonders spannend ohne Kreatin aus Fleisch.</p>
-              <div class="spec"><b>Mein Kaufstandard</b>100 % Kreatin-Monohydrat · ohne Blend · gutes Preis-pro-Gramm · Laboranalyse</div>
+              <p>Nehme ich täglich. Daraus wollte ich schon einmal eine eigene Brand bauen: MYKŌ Ascend. Die Kernidee gilt noch immer: Not a supplement. A staple.</p>
+              <div class="spec"><b>Mein Kaufstandard</b>100 % Kreatin-Monohydrat · gern Creapure® · ohne Blend · Preis pro 5 g · Laboranalyse</div>
+              <button class="guide-button" type="button" data-guide="creatine">3–5-g-Guide + Brand Story <span>↗</span></button>
               <a class="btn affiliate" data-product="creatine" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
@@ -398,6 +461,7 @@
               <h3>Magnesium</h3>
               <p>Kein Wundermittel, aber praktisch, wenn Ernährung, Sport oder Alltag die Versorgung nicht zuverlässig abdecken.</p>
               <div class="spec"><b>Mein Kaufstandard</b>Elementarmenge angegeben · gut verträgliche Verbindung · keine unnötigen Mega-Dosen</div>
+              <button class="guide-button" type="button" data-guide="magnesium">Dosis & Evidenz <span>↗</span></button>
               <a class="btn affiliate" data-product="magnesium" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
@@ -409,6 +473,7 @@
               <h3>Polyphenol-Olivenöl</h3>
               <p>Das Upgrade, das man schmeckt. Pfeffrig, frisch und mit nachvollziehbarer Ernte statt anonymer Lifestyle-Flasche.</p>
               <div class="spec"><b>Mein Kaufstandard</b>Erntejahr + Region · dunkle Flasche · frühe Ernte · Polyphenolwert / Analyse</div>
+              <button class="guide-button" type="button" data-guide="oliveoil">Menge & Qualitätscheck <span>↗</span></button>
               <a class="btn affiliate" data-product="oliveoil" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
@@ -420,6 +485,7 @@
               <h3>Funktionale Pilze</h3>
               <p>Lion’s Mane, Reishi & Co. finde ich spannend — aber hier ist mehr Marketing als bei B12. Deshalb besonders streng auswählen.</p>
               <div class="spec"><b>Mein Kaufstandard</b>Fruchtkörper · Extraktionsverhältnis · Beta-Glucane analysiert · keine Proprietary Blend</div>
+              <button class="guide-button" type="button" data-guide="mushrooms">Evidenz ehrlich prüfen <span>↗</span></button>
               <a class="btn affiliate" data-product="mushrooms" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
@@ -431,6 +497,7 @@
               <h3>Jod</h3>
               <p>Ein echter veganer Blindspot — besonders ohne jodiertes Salz oder verlässliche Algenmenge. Hier zählt Präzision statt „viel hilft viel“.</p>
               <div class="spec"><b>Mein Kaufstandard</b>niedrig und klar dosierbar · keine schwankenden Kelp-Mengen · Schilddrüse berücksichtigen</div>
+              <button class="guide-button" type="button" data-guide="iodine">Dosis & Evidenz <span>↗</span></button>
               <a class="btn affiliate" data-product="iodine" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
@@ -490,6 +557,13 @@
     </div>
   </footer>
 
+  <div class="modal guide-modal" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <div class="guide-dialog">
+      <div class="guide-top"><span>STPLS. · Dosis & Evidenz</span><button class="close" id="closeGuide" aria-label="Guide schließen">×</button></div>
+      <div class="guide-body" id="guideContent"></div>
+    </div>
+  </div>
+
   <div class="modal" id="linkModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
       <div class="modal-top"><h3 id="modalTitle">Pick ist reserviert.</h3><button class="close" id="closeModal" aria-label="Dialog schließen">×</button></div>
@@ -516,6 +590,202 @@
       iodine: ""
     };
 
+    const GUIDES = {
+      b12: {
+        title: "Vitamin B12",
+        tag: "vegan essential",
+        evidence: "Evidenz: sehr stark",
+        intro: "B12 ist für Veganer:innen kein optionales Wellness-Extra. Entscheidend ist eine verlässliche Routine — nicht die größte Zahl auf der Dose.",
+        dose: "25 µg täglich",
+        doseNote: "Mein pragmatischer Default für gesunde Erwachsene ohne bekannten Mangel oder Aufnahmestörung. Alternativ: 2.000 µg einmal pro Woche.",
+        blocks: `
+          <div class="guide-block"><h4>Die klare Antwort</h4><p>Die DGE nennt für Erwachsene eine angemessene Zufuhr von <strong>4 µg pro Tag</strong>. Das ist ein Ernährungs-Referenzwert, nicht automatisch die ideale Tablettenstärke. Die Vegan Society empfiehlt als einfache Supplement-Routine mindestens <strong>10 µg täglich</strong> oder <strong>2.000 µg wöchentlich</strong>. Ich würde für eine robuste, günstige Daily-Routine <strong>25 µg Cyanocobalamin</strong> wählen.</p></div>
+          <div class="guide-block"><h4>Wie viel kommt an?</h4><p>Es gibt einen aktiv begrenzten Aufnahmeweg plus ungefähr 1 % passive Diffusion bei hohen Dosen. Laut NIH werden bei 1–2 µg ungefähr 50 % aufgenommen, bei <strong>500 µg etwa 2 % ≈ 10 µg</strong> und bei <strong>1.000 µg etwa 1,3 % ≈ 13 µg</strong>. Darum sind hohe Dosen nicht 200-mal wirksamer als kleine.</p></div>
+          <div class="guide-block wide"><h4>2,5 oder 4 oder 25 oder 100 oder 500?</h4>
+            <table class="dose-table"><thead><tr><th>Dosis</th><th>Meine Einordnung als alleinige Routine</th></tr></thead><tbody>
+              <tr><td><strong>2,5 µg/Tag</strong></td><td>Zu knapp. Kann mit angereicherten Lebensmitteln beitragen, ist mir allein aber nicht robust genug.</td></tr>
+              <tr><td><strong>4 µg/Tag</strong></td><td>Entspricht dem DGE-Zufuhrwert, lässt als einzelne Supplement-Dosis wenig Puffer für schwankende Aufnahme.</td></tr>
+              <tr><td><strong>10 µg/Tag</strong></td><td>Eine etablierte tägliche Mindeststrategie. Funktioniert bei konsequenter Einnahme.</td></tr>
+              <tr><td><strong>25 µg/Tag</strong></td><td><strong>Mein Sweet Spot:</strong> einfach, günstig, mit Puffer — ohne unnötige Megadosis.</td></tr>
+              <tr><td><strong>100 µg/Tag</strong></td><td>Für Erhaltung meist mehr als nötig; kann praktisch sein, bringt aber nicht proportional mehr Aufnahme.</td></tr>
+              <tr><td><strong>500 µg/Tag</strong></td><td>Etwa 2 % bzw. rund 10 µg werden laut NIH aufgenommen. Für normale Erhaltung täglich meist Overkill.</td></tr>
+            </tbody></table>
+          </div>
+          <div class="guide-block"><h4>Form & Timing</h4><p><strong>Cyanocobalamin</strong> ist stabil, gut untersucht und meist günstig. NIH sieht keine überzeugenden Unterschiede der Aufnahme zwischen den üblichen Formen; auch sublingual ist oral nicht nachweisbar überlegen. Kleine Dosen konsequent täglich, hohe Dosen nach festem Wochenrhythmus.</p></div>
+          <div class="guide-block"><h4>Wann nicht selbst herumprobieren?</h4><p>Bei Symptomen, bekanntem Mangel, Magen-Darm-Erkrankung, bariatrischer OP, Metformin oder Säureblockern reicht eine Standardroutine eventuell nicht. Dann Werte und Therapie ärztlich klären. Ein Mangel wird nicht mit der Erhaltungsdosis behandelt.</p></div>`,
+        sources: [
+          ["DGE: B12-Referenzwert & vegane Ernährung", "https://www.dge.de/gesunde-ernaehrung/faq/vitamin-b12/"],
+          ["NIH ODS: Aufnahme, Formen, Sicherheit", "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/"],
+          ["The Vegan Society: 10 µg täglich / 2.000 µg wöchentlich", "https://www.vegansociety.com/resources/nutrition-and-health/nutrients/vitamin-b12/what-every-vegan-should-know-about-vitamin-b12"],
+          ["BfR: Höchstmengenvorschlag für Supplements", "https://www.bfr.bund.de/cm/343/hoechstmengenvorschlaege-fuer-vitamin-b12-in-lebensmitteln-inklusive-nahrungsergaenzungsmitteln.pdf"]
+        ]
+      },
+      creatine: {
+        title: "Kreatin",
+        tag: "mike’s daily",
+        evidence: "Evidenz: stark für Performance",
+        intro: "Das wiederkehrende Thema war real: erst CREA by Mikel Ninh, später MYKŌ Ascend. Der Kern ist heute derselbe — reines Kreatin-Monohydrat als tägliches, unspektakulär gutes Ritual.",
+        dose: "3–5 g täglich",
+        doseNote: "Jeden Tag, Uhrzeit egal. 300 g ergeben bei 5 g pro Tag 60 Portionen bzw. ungefähr zwei Monate.",
+        blocks: `
+          <div class="guide-block"><h4>Was bringt es wirklich?</h4><p>Die beste Evidenz gibt es für Kraft, Leistung bei wiederholten kurzen hochintensiven Belastungen und Trainingsanpassung. Für Ausdauer allein ist der Nutzen deutlich kleiner. Kognition ist spannend, aber noch kein gleich starker Kaufgrund wie Performance.</p></div>
+          <div class="guide-block"><h4>Warum besonders vegan?</h4><p>Kreatin steckt natürlicherweise vor allem in Fleisch und Fisch. Vegetarisch und vegan lebende Menschen haben deshalb im Mittel niedrigere Ausgangsspeicher und können gut reagieren. Das macht Kreatin nicht „essentiell“, aber zu einem sehr logischen veganen Performance-Staple.</p></div>
+          <div class="guide-block"><h4>Form, Timing, Loading</h4><ul><li><strong>Form:</strong> 100 % Kreatin-Monohydrat. Teurere Spezialformen sind nicht überzeugend überlegen.</li><li><strong>Timing:</strong> egal; tägliche Konsistenz schlägt Pre-Workout-Magie.</li><li><strong>Loading:</strong> nicht nötig. Optional 20 g/Tag auf 4 Portionen für 5–7 Tage, danach 3–5 g/Tag — sättigt schneller, kann aber Magen und Waage stärker bewegen.</li></ul></div>
+          <div class="guide-block"><h4>Kaufstandard</h4><ul><li>Preis pro 5-g-Portion rechnen, nicht pro Dose.</li><li>Keine Blends, Aromen oder „Matrix“ nötig.</li><li>Creapure® ist eine nachvollziehbare Premium-Rohstoffoption, aber ein sauber getestetes Monohydrat kann ebenfalls passen.</li><li>Leichte Gewichtszunahme durch Wasser in der Muskulatur ist erwartbar, kein Fettaufbau.</li></ul></div>
+          <div class="guide-block wide"><h4>Aus dem Archiv: MYKŌ Ascend</h4><p>Die frühere Brand-Idee hieß <strong>MYKŌ Ascend — The Conscious Athlete’s Edge</strong>. Das Kernprodukt <strong>Pure Ascend</strong> war als 300-g-Packung mit 100 % veganem deutschen Creapure® gedacht. Daneben gab es „Ascend Synergy“ mit Cordyceps und Lion’s Mane. Heute würde ich noch klarer starten: <strong>Pure Ascend zuerst</strong>. Ein Wirkstoff, 60 ehrliche Tagesportionen, unabhängig getestet. <em>Not a supplement. A staple.</em></p></div>
+          <div class="guide-block"><h4>Sicherheit</h4><p>Für gesunde Erwachsene gilt Kreatin in üblichen Dosen als gut untersucht. Bei Nierenerkrankung, Schwangerschaft, relevanten Medikamenten oder ungeklärten Laborwerten vorher fachlich klären. Kreatinin kann sich verändern; dem medizinischen Team die Einnahme nennen.</p></div>
+          <div class="guide-block"><h4>Mein Verdict</h4><p>Wenn ich nur einen Performance-Pick behalten dürfte, wäre es dieser: <strong>5 g Monohydrat täglich</strong>, ohne Zyklus, ohne Loading-Zwang, ohne Lifestyle-Aufpreis.</p></div>`,
+        sources: [
+          ["NIH ODS: Creatine & exercise performance", "https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional/"],
+          ["ISSN review: safety and efficacy", "https://pubmed.ncbi.nlm.nih.gov/28615996/"],
+          ["Common questions and misconceptions", "https://pubmed.ncbi.nlm.nih.gov/33557850/"],
+          ["EU: zugelassener Creatine-Health-Claim", "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32012R0432"]
+        ]
+      },
+      omega3: {
+        title: "Algen-Omega-3",
+        tag: "vegan essential",
+        evidence: "Evidenz: solide",
+        intro: "ALA aus Leinsamen und Walnüssen bleibt wertvoll. Algenöl liefert EPA und DHA direkt — ohne auf die begrenzte körpereigene Umwandlung zu wetten.",
+        dose: "250 mg EPA + DHA",
+        doseNote: "Täglicher Basiswert für gesunde Erwachsene. Entscheidend ist die Summe EPA+DHA, nicht die große Zahl „Algenöl“ vorn auf der Packung.",
+        blocks: `
+          <div class="guide-block"><h4>Mein Default</h4><p>Mindestens <strong>250 mg EPA plus DHA pro Tag</strong> aus Mikroalgen, mit einer Mahlzeit. Wer kaum ALA-Quellen isst, schwanger ist oder medizinische Ziele verfolgt, braucht eine individuellere Einordnung.</p></div>
+          <div class="guide-block"><h4>Etikett lesen</h4><p>„1.000 mg Algenöl“ sagt fast nichts. Gesucht sind die separat ausgewiesenen Milligramm <strong>EPA und DHA</strong>, eine klar benannte Algenquelle, Antioxidationsschutz und möglichst Chargen- bzw. Oxidationsprüfung.</p></div>
+          <div class="guide-block"><h4>Aufnahme</h4><p>Mit einer fetthaltigen Mahlzeit ist die Einnahme praktisch und oft verträglicher. ALA wird nur begrenzt zu EPA und besonders wenig zu DHA umgewandelt; Algenöl umgeht diesen Schritt.</p></div>
+          <div class="guide-block"><h4>Grenzen</h4><p>Höhere Dosen sind kein automatisches Upgrade. Bei Blutverdünnern, Blutungsstörungen, geplanter OP oder therapeutischen Gramm-Dosen fachlich abstimmen.</p></div>`,
+        sources: [
+          ["EFSA: 250 mg EPA+DHA als angemessene Zufuhr", "https://www.efsa.europa.eu/en/efsajournal/pub/2815"],
+          ["EFSA: Dietary Reference Values summary", "https://www.efsa.europa.eu/sites/default/files/2017_09/DRVs_summary_report.pdf"],
+          ["NIH ODS: Omega-3 factsheet", "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"]
+        ]
+      },
+      vitamind: {
+        title: "Vitamin D3",
+        tag: "seasonal",
+        evidence: "Evidenz: stark bei Unterversorgung",
+        intro: "Vitamin D ist kontextabhängig: Sonne, Jahreszeit, Haut, Alter und Lebensstil verändern den Bedarf. Mehr ist nicht automatisch besser.",
+        dose: "20 µg / 800 IE",
+        doseNote: "DGE-Schätzwert bei fehlender körpereigener Bildung. Nicht pauschal als Ganzjahres-Megadosis verstehen.",
+        blocks: `
+          <div class="guide-block"><h4>Mein Default</h4><p>Im lichtarmen Winter ist <strong>20 µg bzw. 800 IE täglich</strong> ein vernünftiger Ausgangspunkt, wenn kaum Eigenbildung stattfindet. Wer gezielt optimieren oder einen Mangel behandeln will, entscheidet nach 25-OH-D-Blutwert und medizinischem Kontext.</p></div>
+          <div class="guide-block"><h4>Vegan kaufen</h4><p>D3 aus <strong>Flechten</strong>, klare IE- und µg-Angabe, idealerweise in Öl. Merksatz: 1 µg entspricht 40 IE. Mit einer Mahlzeit einnehmen.</p></div>
+          <div class="guide-block"><h4>Kein Bolus-Hype</h4><p>Seltene extreme Hochdosen sind ohne klare Indikation keine Lifestyle-Abkürzung. Die EFSA setzt für Erwachsene die tolerierbare Obergrenze bei <strong>100 µg bzw. 4.000 IE täglich</strong> — das ist eine Sicherheitsgrenze, kein Zielwert.</p></div>
+          <div class="guide-block"><h4>Wann messen?</h4><p>Besonders sinnvoll bei wenig Sonne, dunkler Haut, bedeckender Kleidung, höherem Alter, Malabsorption oder früherem Mangel. Behandlung eines Mangels gehört in fachliche Hände.</p></div>`,
+        sources: [
+          ["DGE: Vitamin-D-Referenzwert", "https://www.dge.de/wissenschaft/referenzwerte/vitamin-d/"],
+          ["EFSA: Dietary Reference Values & Upper Limits", "https://www.efsa.europa.eu/en/topics/topic/dietary-reference-values"],
+          ["NIH ODS: Vitamin D factsheet", "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/"]
+        ]
+      },
+      magnesium: {
+        title: "Magnesium",
+        tag: "context pick",
+        evidence: "Evidenz: stark als Nährstoff",
+        intro: "Ein essentieller Mineralstoff, aber nicht automatisch ein Supplement. Erst die Ernährung, dann gezielt die Lücke schließen.",
+        dose: "100–250 mg extra",
+        doseNote: "Pragmatischer Supplement-Bereich bei einer echten Ernährungslücke — angegeben als elementares Magnesium, nicht Verbindungsgewicht.",
+        blocks: `
+          <div class="guide-block"><h4>Bedarf vs. Supplement</h4><p>Die DGE-Schätzwerte für Erwachsene liegen bei ungefähr <strong>300 mg/Tag für Frauen und 350 mg/Tag für Männer</strong> aus allen Quellen. Nüsse, Samen, Hülsenfrüchte, Vollkorn und grünes Gemüse können viel davon liefern.</p></div>
+          <div class="guide-block"><h4>Form zählt</h4><p>Auf dem Etikett zählt die <strong>Elementarmenge</strong>. Citrat, Chlorid, Lactat oder Aspartat werden tendenziell besser aufgenommen als Oxid; Glycinat wird oft gut vertragen, ist aber nicht magisch.</p></div>
+          <div class="guide-block"><h4>Mein Default</h4><p>Wenn die Ernährung sichtbar nicht reicht: mit <strong>100–250 mg täglich</strong> starten, gegebenenfalls teilen. Mehr verursacht häufig nur Durchfall. Das BfR schlägt für Nahrungsergänzungsmittel maximal 250 mg pro Tagesverzehrempfehlung vor.</p></div>
+          <div class="guide-block"><h4>Vorsicht</h4><p>Bei Nierenerkrankung nicht auf eigene Faust supplementieren. Magnesium kann unter anderem die Aufnahme bestimmter Antibiotika und Bisphosphonate stören — zeitlichen Abstand bzw. Fachberatung beachten.</p></div>`,
+        sources: [
+          ["DGE: Magnesium-Referenzwerte", "https://www.dge.de/wissenschaft/referenzwerte/magnesium/"],
+          ["NIH ODS: Magnesium absorption & interactions", "https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/"],
+          ["BfR: Höchstmengenvorschlag", "https://www.bfr.bund.de/cm/343/hoechstmengenvorschlaege-fuer-magnesium-in-lebensmitteln-inklusive-nahrungsergaenzungsmitteln.pdf"]
+        ]
+      },
+      oliveoil: {
+        title: "Polyphenol-Olivenöl",
+        tag: "food & ritual",
+        evidence: "Evidenz: solide als Lebensmittel",
+        intro: "Extra natives Olivenöl ist zuerst gutes Essen. Ein hoher Polyphenolgehalt kann ein Qualitätsmerkmal sein — sollte aber belegt und nicht nur poetisch behauptet werden.",
+        dose: "15–20 g täglich",
+        doseNote: "Etwa 1–1,5 Esslöffel als praktischer Food-Default, zum Beispiel über Gemüse, Hülsenfrüchte oder Salat.",
+        blocks: `
+          <div class="guide-block"><h4>Was „high polyphenol“ heißt</h4><p>Für den zugelassenen EU-Claim zum Schutz der Blutfette vor oxidativem Stress müssen 20 g Öl mindestens 5 mg Hydroxytyrosol und verwandte Verbindungen liefern. Ein Laborwert macht die Aussage überprüfbar.</p></div>
+          <div class="guide-block"><h4>Mein Kaufcheck</h4><p>Extra nativ, aktuelle Ernte, konkrete Region und Produzent, dunkle Flasche oder Dose, kleines Gebinde und Polyphenol-Analyse mit Datum. Pfeffrigkeit ist ein guter Hinweis, aber kein Laborbericht.</p></div>
+          <div class="guide-block"><h4>Frische schlägt Prestige</h4><p>Kühl, dunkel und gut verschlossen lagern; nach dem Öffnen zügig verbrauchen. Eine teure Designflasche ohne Erntejahr ist für mich kein Premiumprodukt.</p></div>
+          <div class="guide-block"><h4>Kein Supplement-Zwang</h4><p>Die Menge ersetzt anderes Fett und ergänzt eine gute Ernährung. Nicht zusätzlich literweise trinken, um einen Polyphenol-Score zu jagen — Energie bleibt Energie.</p></div>`,
+        sources: [
+          ["EFSA: Olive-oil polyphenols health claim", "https://www.efsa.europa.eu/en/efsajournal/pub/2033"],
+          ["EU Register: zugelassene Health Claims", "https://ec.europa.eu/food/food-feed-portal/screen/health-claims/eu-register"]
+        ]
+      },
+      mushrooms: {
+        title: "Funktionale Pilze",
+        tag: "curious pick",
+        evidence: "Evidenz: früh / gemischt",
+        intro: "Lion’s Mane & Co. sind interessant, aber keine vegane Versorgungslücke. Hier darf die Produktqualität nicht stärker klingen als die Humanstudien.",
+        dose: "Keine Standarddosis",
+        doseNote: "Für gesunde Menschen gibt es derzeit keine allgemein etablierte tägliche Dosis mit ähnlich robuster Evidenz wie bei B12 oder Kreatin.",
+        blocks: `
+          <div class="guide-block"><h4>Meine Einordnung</h4><p>Explorativ, nicht essentiell. Kleine Studien zu Lion’s Mane zeigen interessante Signale, andere randomisierte Studien finden keine klaren akuten Vorteile. Das reicht für Neugier — nicht für Heilsversprechen.</p></div>
+          <div class="guide-block"><h4>Wenn überhaupt kaufen</h4><p>Art und Pflanzenteil klar benannt, bevorzugt Fruchtkörper, Extraktionsverhältnis erklärt, Beta-Glucane quantitativ ausgewiesen und Prüfung auf Schwermetalle sowie Mikrobiologie.</p></div>
+          <div class="guide-block"><h4>Marketing-Fallen</h4><p>„10:1“ ohne Ausgangsmenge, Myzel auf Getreide ohne Transparenz, nur „Polysaccharide“ statt Beta-Glucane und Proprietary Blends mit nicht genannten Mengen.</p></div>
+          <div class="guide-block"><h4>Grenzen</h4><p>Keine Routineempfehlung für Schwangerschaft, Autoimmunerkrankungen, Blutverdünner oder vor Operationen ohne medizinische Rücksprache. Qualität und Wechselwirkungen sind produktspezifisch.</p></div>`,
+        sources: [
+          ["2025 review: Lion’s Mane and cognition", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12030463/"],
+          ["2025 randomized acute trial", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12018234/"],
+          ["2019 randomized controlled trial", "https://pubmed.ncbi.nlm.nih.gov/31413233/"]
+        ]
+      },
+      iodine: {
+        title: "Jod",
+        tag: "vegan blindspot",
+        evidence: "Evidenz: stark als Nährstoff",
+        intro: "Jod ist essentiell und bei veganer Ernährung leicht zu übersehen. Gleichzeitig kann unkontrolliertes Kelp sehr viel und sehr schwankend liefern.",
+        dose: "100 µg bei Lücke",
+        doseNote: "DGE-Position für Erwachsene bei unzureichender Zufuhr über jodiertes Salz und Lebensmittel: Supplement nach ärztlicher Rücksprache.",
+        blocks: `
+          <div class="guide-block"><h4>Erst die Basis prüfen</h4><p>Verwendest du regelmäßig jodiertes Speisesalz und kennst du die Jodmenge angereicherter Pflanzendrinks oder anderer Produkte? Die DGE nennt für Erwachsene einen Referenzwert von <strong>150 µg pro Tag</strong> aus allen Quellen.</p></div>
+          <div class="guide-block"><h4>Mein Default bei Lücke</h4><p>Wenn die Versorgung nicht zuverlässig ist, sind <strong>100 µg täglich</strong> aus einer präzise dosierten Quelle nachvollziehbarer als gelegentliche Algenportionen. Das ist kein Zusatz zu einer bereits hohen Jodzufuhr.</p></div>
+          <div class="guide-block"><h4>Kelp ist kein Messlöffel</h4><p>Der Jodgehalt von Meeresalgen schwankt extrem. Deshalb keine hoch dosierten Kelp-Produkte als Daily-Routine, wenn die tatsächliche Menge nicht sauber analysiert ist.</p></div>
+          <div class="guide-block"><h4>Schilddrüse mitdenken</h4><p>Bei Schilddrüsenerkrankung, Medikamenten, Schwangerschaft oder auffälligen Werten Dosierung vorher fachlich klären. Sowohl zu wenig als auch zu viel Jod kann problematisch sein.</p></div>`,
+        sources: [
+          ["DGE: Jod-Referenzwert", "https://www.dge.de/wissenschaft/referenzwerte/jod/"],
+          ["DGE 2024: Position zu veganer Ernährung", "https://www.dge.de/fileadmin/dok/wissenschaft/positionen/DGE_Position-statement_Update_vegan_nutrition_EU_2024_60-84.pdf"],
+          ["NIH ODS: Iodine factsheet", "https://ods.od.nih.gov/factsheets/Iodine-HealthProfessional/"]
+        ]
+      }
+    };
+
+    const guideModal = document.getElementById('guideModal');
+    const guideContent = document.getElementById('guideContent');
+    let lastGuideTrigger = null;
+
+    const closeGuide = () => {
+      guideModal.classList.remove('open');
+      document.body.style.overflow = '';
+      if (lastGuideTrigger) lastGuideTrigger.focus();
+    };
+
+    const openGuide = (key, trigger) => {
+      const item = GUIDES[key];
+      if (!item) return;
+      lastGuideTrigger = trigger;
+      guideContent.innerHTML = `
+        <div class="guide-heading">
+          <div>
+            <div class="guide-eyebrow"><span class="guide-pill strong">${item.tag}</span><span class="guide-pill">${item.evidence}</span></div>
+            <h3 id="guideTitle">${item.title}</h3>
+            <p class="guide-intro">${item.intro}</p>
+          </div>
+          <div class="dose-card"><small>Mein pragmatischer Default</small><strong>${item.dose}</strong><p>${item.doseNote}</p></div>
+        </div>
+        <div class="guide-grid">${item.blocks}</div>
+        <div class="guide-sources"><strong>Originalquellen</strong>${item.sources.map(source => `<a href="${source[1]}" target="_blank" rel="noopener">${source[0]} ↗</a>`).join('')}</div>
+        <p class="guide-note">Zuletzt fachlich überprüft: 17. Juli 2026. Persönliche Einordnung für gesunde Erwachsene, keine Diagnose oder individuelle Therapie.</p>`;
+      guideModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('closeGuide').focus();
+    };
+
+    document.querySelectorAll('[data-guide]').forEach(button => button.addEventListener('click', () => openGuide(button.dataset.guide, button)));
+    document.getElementById('closeGuide').addEventListener('click', closeGuide);
+    guideModal.addEventListener('click', event => { if (event.target === guideModal) closeGuide(); });
+
     const nav = document.querySelector('nav');
     addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 12), { passive: true });
 
@@ -533,7 +803,11 @@
     document.getElementById('closeModal').addEventListener('click', closeModal);
     document.getElementById('modalUpdates').addEventListener('click', closeModal);
     modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
-    addEventListener('keydown', event => { if (event.key === 'Escape') closeModal(); });
+    addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      if (guideModal.classList.contains('open')) closeGuide();
+      if (modal.classList.contains('open')) closeModal();
+    });
 
     document.querySelectorAll('.affiliate[data-product]').forEach(link => {
       const url = AFFILIATE_LINKS[link.dataset.product];

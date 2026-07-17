@@ -2,6 +2,8 @@
 
 Eine persönliche, redaktionelle Affiliate-Discovery-Seite für vegane Basics — plus der ursprüngliche TWELVE-B12-Pre-Launch-Prototyp.
 
+**Live:** https://stpls-vegan-staples.vercel.app/
+
 Die Startseite ist als schneller Instagram-Bio-Funnel optimiert: persönlicher Creator-Kontext, mobile Schnelleinstiege zu B12, Omega-3 und Kreatin, eine kompakte Sticky-Navigation und Social-Preview-Metadaten. Jeder Staple besitzt zusätzlich einen kompakten Guide mit Dosis, Einnahme, Evidenzgrenzen, Sicherheit und verlinkten Originalquellen.
 
 ## Seiten

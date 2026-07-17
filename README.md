@@ -1,79 +1,76 @@
-# STPLS. — Mike's Vegan Staples
+# Michael Ninh — Work, Ideas & Vegan Staples
 
-Eine persönliche, redaktionelle Affiliate-Discovery-Seite für vegane Basics — plus der ursprüngliche TWELVE-B12-Pre-Launch-Prototyp.
+Michael Ninhs persönliche Website als lebendiger Index: AI-Projekte, Gedanken über Technologie und Zukunft, vegane Staples, ehrliche Produkttests, Bücher, Filme und persönliche Werte.
 
 **Live:** https://stpls-vegan-staples.vercel.app/
 
-Die Startseite ist als schneller Instagram-Bio-Funnel optimiert: persönlicher Creator-Kontext, mobile Schnelleinstiege zu B12, Omega-3 und Kreatin, eine kompakte Sticky-Navigation und Social-Preview-Metadaten. Jeder Staple besitzt zusätzlich einen kompakten Guide mit Dosis, Einnahme, Evidenzgrenzen, Sicherheit und verlinkten Originalquellen.
+## Struktur
 
-## Seiten
+- **Work:** GitLaw, SafeVoice, Recht-MCP und INCA Loop
+- **Ideas:** AI, menschliche Handlungsfähigkeit, offene Infrastruktur und bewusste Technologie
+- **Staples:** persönlicher Status statt generischer Supplement-Liste
+- **Protein, actually food:** Sojamilch, Tofu, Tempeh, Seitan, Edamame und TVP mit typischen Proteinwerten
+- **The Table Test:** ehrliche Produkttests mit Michael, Partner:in und Freund:innen
+- **Culture:** Bücher, Filme, Dokumentationen und Lehrer:innen
+- **Vision:** Human flourishing · Planetary health · Conscious freedom · Love at scale
+- **Partners:** Briefing für Hersteller, Samples und transparente Affiliate-Kooperationen
 
-- `index.html`: STPLS. mit kuratiertem Stack, acht Evidenz-Guides, Filtern und transparenter Affiliate-Logik
-- `b12.html`: TWELVE — B12. Erledigt.
+## Persönlicher Staple-Status
 
-## Dosis- und Evidenz-Guides
+- Core: B12, Kreatin, Soja-/Protein-Foods, Lion’s Mane und hochwertiges Olivenöl
+- Seasonal: Vitamin D im Berliner Winter
+- Secondary: Magnesium
+- Currently not taking: Algen-Omega-3
+- Entfernt: Jod und Melatonin
 
-Die Startseite enthält Guides für:
+Die Dosis- und Evidenz-Guides verlinken Originalquellen von DGE, BfR, EFSA, NIH, EU-Recht und Fachpublikationen. Der Olivenöl-Guide enthält eine aktuelle, noch unbestätigte Watchlist für lab-getestete High-Phenolic-Produkte.
 
-- Vitamin B12 mit klarer Einordnung von 2,5 / 4 / 10 / 25 / 100 / 500 µg und Erklärung der dosisabhängigen Aufnahme
-- Kreatin mit 3–5-g-Daily-Routine, Loading-Option, Kaufstandard und der wiederentdeckten Brand-DNA von `MYKŌ Ascend`
-- Algen-Omega-3, Vitamin D3, Magnesium, Polyphenol-Olivenöl, funktionale Pilze und Jod
+## Der Review-Standard
 
-Alle Inhalte trennen einen pragmatischen persönlichen Default von offiziellen Referenzwerten, Sicherheitsgrenzen und therapeutischen Dosierungen. Quellen führen direkt zu DGE, BfR, EFSA, NIH, EU-Recht oder den jeweils genannten Fachpublikationen.
+Die entscheidende Frage lautet: **Würde ich das mit meinem eigenen Geld noch einmal kaufen?**
 
-## Kreatin-Archiv
+Bewertet werden:
 
-Die aktuelle Kreatin-Einordnung greift die frühere Produktidee `MYKŌ Ascend — The Conscious Athlete's Edge` auf: ein fokussiertes Kernprodukt `Pure Ascend`, 300 g reines veganes Creapure® und 60 Tagesportionen à 5 g. Die Leitidee bleibt: **Not a supplement. A staple.** Das ist im aktuellen Stand Brand-Kontext, kein bereits erhältliches Produkt.
+- Geschmack
+- Zutaten
+- Nährwerte oder Evidenz
+- Preis-Leistung
+- Alltagstauglichkeit
+- finales Verdict: `YES`, `MAYBE` oder `NO`
+
+Ein Affiliate-Link wird nur bei `YES` hinterlegt. Samples werden offengelegt, Hersteller erhalten keine Kontrolle über das Ergebnis und Rankings können nicht gekauft werden.
+
+### Angebot für Hersteller
+
+`The Blind Table Test` ist als bezahlter, zunächst privater Produkt-Feedback-Sprint positioniert:
+
+- Produktversand und konkrete Herstellerfragen
+- 3–6 Tester:innen aus Michaels persönlichem Umfeld
+- blindes oder semi-blindes Tasting, sofern sinnvoll möglich
+- Video der unverstellten ersten Geschmacksreaktion jeder Person
+- individuelle `YES / MAYBE / NO`-Verdicts
+- klare Antwort auf „Würde ich es selbst nachkaufen?“
+- Zusammenfassung von Stärken, Reibung und Verbesserungsideen
+
+Bezahlt wird für Durchführung und Research, nicht für ein positives Ergebnis. Ein öffentlicher Review oder Affiliate-Link ist eine separate redaktionelle Entscheidung und entsteht nur nach einem echten `YES`.
 
 ## Affiliate-Links einsetzen
 
-In `index.html` befindet sich am Ende der Konfigurationsblock `AFFILIATE_LINKS`. Dort können die echten Partner-URLs für Omega-3, Vitamin D, Kreatin, Magnesium, Olivenöl, funktionale Pilze und Jod eingetragen werden.
+Am Ende von `index.html` liegt der Konfigurationsblock `AFFILIATE_LINKS` für Omega-3, Vitamin D, Kreatin, Magnesium, Olivenöl und Lion’s Mane. Leere Werte öffnen einen transparenten Platzhalter-Dialog. Echte Links werden mit `rel="sponsored noopener"` gekennzeichnet.
 
-Solange ein Wert leer ist, öffnet der jeweilige Button transparent einen Platzhalter-Dialog. Sobald eine URL hinterlegt ist, öffnet sie sich in einem neuen Tab und wird technisch mit `rel="sponsored noopener"` gekennzeichnet.
+## TWELVE B12
 
-## TWELVE-Konzept
-
-TWELVE verkauft nicht einfach eine weitere Dose Supplements. Die Idee ist eine **Nie-ohne-Garantie**:
-
-- ein geprüfter Jahresvorrat
-- rechtzeitiger Nachschub
-- klare, verständliche Information
-- faire Preisstufen von Access bis Household
-- transparente Chargenanalysen statt leerer Qualitätsversprechen
-
-## Preisstufen im Prototyp
-
-| Mitgliedschaft | Preis | Idee |
-| --- | ---: | --- |
-| Access | 12 €/Jahr | Niedrige Zugangshürde ohne Nachweispflicht |
-| Essential | 18 €/Jahr | Fairer Standardpreis |
-| Solidarity | 30 €/Jahr | Unterstützt Access-Mitgliedschaften |
-| Household | 49 €/Jahr | Jahresversorgung für bis zu vier Menschen |
-
-## TWELVE Lab
-
-Die Landingpage testet ausserdem unverbindliches Interesse an:
-
-- veganem Algen-Omega-3
-- veganem Vitamin D3
-- Kreatin-Monohydrat
-- Magnesium
-- hochpolyphenolhaltigem Olivenöl
-- funktionalen Pilzprodukten
-
-Die Auswahl wird im aktuellen Prototyp nur lokal im Browser gespeichert. Es werden noch keine Daten an einen Server gesendet.
+`b12.html` bewahrt den ursprünglichen TWELVE-B12-Pre-Launch-Prototyp mit Nie-ohne-Garantie und den Preisstufen 12 €, 18 €, 30 € und Household 49 € pro Jahr.
 
 ## Lokal öffnen
 
-Das Projekt benötigt keinen Build-Schritt und keine Abhängigkeiten.
+Kein Build-Schritt und keine Abhängigkeiten:
 
-1. `index.html` direkt im Browser öffnen, oder
-2. im Projektordner `python3 -m http.server 8000` ausführen und `http://localhost:8000` besuchen.
+1. `index.html` direkt öffnen, oder
+2. `python3 -m http.server 8000` im Projektordner starten.
 
-## Status
+## Vor öffentlicher Vermarktung
 
-Pre-Launch-Konzept. Vor Veröffentlichung sind echte Affiliate-Partner, finale Linkkennzeichnung, Impressum, Datenschutz und ein echtes Newsletter-Backend erforderlich. Vor einem eigenen Produktstart kommen Markenprüfung, Lebensmittelrecht, Rezeptur, Herstellerqualifizierung und Laborprüfung hinzu.
+Impressum, Datenschutz, finale Affiliate-Kennzeichnung und eine echte Kontaktmöglichkeit müssen ergänzt werden. Bei eigenen Produkten kommen Markenprüfung, Lebensmittelrecht, Herstellerqualifizierung und Laborprüfung hinzu.
 
-## Medizinischer Hinweis
-
-Dieses Projekt ist keine medizinische Beratung. Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene Ernährung. Bei bekanntem Mangel, Resorptionsstörungen, Beschwerden oder relevanten Erkrankungen gehört die Versorgung in fachliche Hände.
+Die Seite bietet persönliche Einordnung, keine medizinische Beratung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung.

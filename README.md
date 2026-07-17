@@ -1,8 +1,19 @@
-# TWELVE — B12. Erledigt.
+# STPLS. — Mike's Vegan Staples
 
-Ein interaktiver Pre-Launch-Prototyp für eine faire, transparente und verlässliche Vitamin-B12-Mitgliedschaft.
+Eine persönliche, redaktionelle Affiliate-Discovery-Seite für vegane Basics — plus der ursprüngliche TWELVE-B12-Pre-Launch-Prototyp.
 
-## Konzept
+## Seiten
+
+- `index.html`: STPLS. mit kuratiertem Stack, Filtern und transparenter Affiliate-Logik
+- `b12.html`: TWELVE — B12. Erledigt.
+
+## Affiliate-Links einsetzen
+
+In `index.html` befindet sich am Ende der Konfigurationsblock `AFFILIATE_LINKS`. Dort können die echten Partner-URLs für Omega-3, Vitamin D, Kreatin, Magnesium, Olivenöl, funktionale Pilze und Jod eingetragen werden.
+
+Solange ein Wert leer ist, öffnet der jeweilige Button transparent einen Platzhalter-Dialog. Sobald eine URL hinterlegt ist, öffnet sie sich in einem neuen Tab und wird technisch mit `rel="sponsored noopener"` gekennzeichnet.
+
+## TWELVE-Konzept
 
 TWELVE verkauft nicht einfach eine weitere Dose Supplements. Die Idee ist eine **Nie-ohne-Garantie**:
 
@@ -43,9 +54,8 @@ Das Projekt benötigt keinen Build-Schritt und keine Abhängigkeiten.
 
 ## Status
 
-Pre-Launch-Konzept. Vor einem echten Marktstart sind unter anderem Markenprüfung, Lebensmittelrecht, finale Rezeptur, Herstellerqualifizierung, Laborprüfung, Datenschutz, Impressum und ein echtes Waitlist-Backend erforderlich.
+Pre-Launch-Konzept. Vor Veröffentlichung sind echte Affiliate-Partner, finale Linkkennzeichnung, Impressum, Datenschutz und ein echtes Newsletter-Backend erforderlich. Vor einem eigenen Produktstart kommen Markenprüfung, Lebensmittelrecht, Rezeptur, Herstellerqualifizierung und Laborprüfung hinzu.
 
 ## Medizinischer Hinweis
 
 Dieses Projekt ist keine medizinische Beratung. Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene Ernährung. Bei bekanntem Mangel, Resorptionsstörungen, Beschwerden oder relevanten Erkrankungen gehört die Versorgung in fachliche Hände.
-

@@ -3,18 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eff2e8">
-  <meta name="description" content="Michael Ninh's Vegan Staples: B12, Kreatin, Protein aus Soja, Lion's Mane, Vitamin D im Berliner Winter und gutes Olivenöl.">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description" content="Michael Ninh ist AI Engineer, Civic-Tech-Builder und veganer Foodie in Berlin. Open-Source-Projekte, ehrliche Empfehlungen und Blind Tastings für Hersteller.">
   <link rel="canonical" href="https://stpls-vegan-staples.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stpls-vegan-staples.vercel.app/">
-  <meta property="og:title" content="Michael Ninh — Work, Ideas & Vegan Staples">
-  <meta property="og:description" content="AI Engineer, Builder und Foodie in Berlin. Projekte, Ideen, ehrliche Produkttests, Kultur und eine Vision für eine menschlichere Zukunft.">
+  <meta property="og:title" content="Michael Ninh — Useful AI & Honest Recommendations">
+  <meta property="og:description" content="AI Engineer, Civic-Tech-Builder und veganer Foodie in Berlin. Ich baue nützliche Systeme und empfehle nur, was ich selbst nachkaufen würde.">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Michael Ninh — Work, Ideas & Vegan Staples">
-  <meta name="twitter:description" content="What I build, think about, use, read and care about.">
+  <meta name="twitter:title" content="Michael Ninh — Useful AI & Honest Recommendations">
+  <meta name="twitter:description" content="Open-source AI, civic tech, vegan staples and blind tastings — from Berlin.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2315231b'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%23dfff44'/%3E%3C/svg%3E">
-  <title>Michael Ninh — Work, Ideas & Vegan Staples</title>
+  <title>Michael Ninh — Useful AI & Honest Recommendations</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Michael Ninh",
+      "jobTitle": "AI Engineer",
+      "homeLocation": { "@type": "Place", "name": "Berlin, Germany" },
+      "email": "mailto:mikel_ninh@yahoo.de",
+      "url": "https://stpls-vegan-staples.vercel.app/",
+      "sameAs": [
+        "https://de.linkedin.com/in/michael-ninh",
+        "https://github.com/mikelninh",
+        "https://www.instagram.com/mikel.ninh/"
+      ]
+    }
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
@@ -345,6 +361,82 @@
     .guide-note { margin-top: 16px !important; color: var(--muted) !important; font-size: 10px !important; }
     .mobile-dock { display: none; top: auto; }
 
+    /* Public-site clarity pass: larger type, less visible density, details on demand. */
+    body { font-size: 16px; }
+    .nav-links { font-size: 14px; }
+    .lead { font-size: clamp(19px, 2vw, 23px); line-height: 1.55; }
+    .hero { min-height: 700px; }
+    .hero-grid { padding-top: 62px; }
+    .hero h1 { max-width: 760px; font-size: clamp(58px, 7.6vw, 104px); line-height: .88; }
+    .creator-copy, .creator-copy strong { font-size: 14px; }
+    .tiny { font-size: 11px; }
+    .quick-pick strong { font-size: 13px; }
+    .quick-pick small { font-size: 9px; }
+    .social-links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+    .social-link { min-height: 39px; display: inline-flex; align-items: center; gap: 7px; padding: 0 13px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.42); font-size: 12px; font-weight: 700; }
+    .social-link:hover { border-color: var(--ink); background: var(--white); }
+    .social-link .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #6c8d61; box-shadow: 0 0 0 4px rgba(108,141,97,.12); }
+    .section-copy { font-size: 18px; line-height: 1.65; }
+    .work-card { min-height: 0; padding: 30px; }
+    .work-card h3 { margin: 33px 0 9px; font-size: 32px; }
+    .work-card > p { font-size: 15px; line-height: 1.65; }
+    .proof-line { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
+    .proof-line span { padding: 7px 9px; border-radius: 999px; color: var(--ink); background: #ece9df; font: 500 10px "DM Mono", monospace; }
+    .work-actions { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+    .work-card .work-actions a { margin-top: 0; font-size: 13px; }
+    .fit-panel { padding: clamp(30px, 5vw, 58px); border: 2px solid var(--ink); border-radius: 32px; background: var(--white); box-shadow: 13px 13px 0 var(--acid); }
+    .fit-glance { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 28px; }
+    .fit-glance div { min-height: 105px; padding: 17px; border: 1px solid var(--line); border-radius: 16px; background: #f2f0e9; }
+    .fit-glance small { display: block; margin-bottom: 12px; color: var(--orange); font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
+    .fit-glance strong { font-size: 15px; line-height: 1.45; }
+    .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .fit-card { padding: 24px; border: 1px solid var(--line); border-radius: 19px; }
+    .fit-card h3 { margin: 0 0 10px; font-size: 23px; letter-spacing: -.04em; }
+    .fit-card p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+    .fit-stack { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 24px; }
+    .fit-stack span { padding: 8px 11px; border-radius: 999px; color: white; background: var(--ink); font: 500 10px "DM Mono", monospace; }
+    .fit-cta { display: grid; grid-template-columns: 1fr auto; gap: 25px; align-items: center; margin-top: 30px; padding-top: 27px; border-top: 1px solid var(--line); }
+    .fit-cta p { max-width: 670px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.65; }
+    .fit-cta .contact-actions { margin-top: 0; }
+    details { border-top: 1px solid var(--line); }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: "+"; float: right; font-size: 18px; font-weight: 500; }
+    details[open] summary::after { content: "−"; }
+    .work-more { margin-top: 21px; padding-top: 14px; }
+    .work-more summary { font-size: 13px; font-weight: 700; }
+    .work-more p { margin: 13px 0 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .idea { min-height: 0; padding: 28px; }
+    .idea summary { min-height: 122px; display: flex; flex-direction: column; justify-content: space-between; font-size: 25px; font-weight: 800; letter-spacing: -.04em; }
+    .idea summary::after { align-self: flex-end; }
+    .idea .idea-no { color: var(--orange); font: 500 10px "DM Mono", monospace; }
+    .idea p { margin: 17px 0 0; padding-top: 17px; border-top: 1px solid var(--line); font-size: 15px; }
+    .product-card { min-height: 405px; }
+    .product-info > p { font-size: 15px; line-height: 1.65; }
+    .product-info .spec { display: none; }
+    .product-meta { font-size: 10px; }
+    .guide-button { margin-top: auto; font-size: 13px; }
+    .protein-card small { font-size: 9px; }
+    .protein-card p { font-size: 13px; }
+    .protein-note { font-size: 12px; }
+    .future-shelf p { font-size: 14px; }
+    .culture-card { min-height: 215px; }
+    .culture-card small { font-size: 9px; }
+    .culture-card p { font-size: 13px; }
+    .culture-card .culture-link { display: inline-flex; margin-top: 15px; font-size: 12px; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+    .rule p, .not-card p { font-size: 15px; }
+    .newsletter p { font-size: 16px; }
+    .partner-brief span { font-size: 14px; }
+    .service-card > p { font-size: 15px; }
+    .service-card li { font-size: 14px; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .contact-actions .btn { min-height: 48px; }
+    .footer-brand p, .footer-col a { font-size: 14px; }
+    .legal { font-size: 12px; }
+    .guide-block p, .guide-block li { font-size: 14px; }
+    .guide-sources a { font-size: 13px; }
+    .guide-note { font-size: 12px !important; }
+
     @media (max-width: 980px) {
       .hero-grid, .manifesto-grid, .newsletter-box { grid-template-columns: 1fr; }
       .hero { min-height: auto; }
@@ -353,6 +445,8 @@
       .product-card { grid-template-columns: .85fr 1.15fr; }
       .manifesto h2 { position: static; }
       .newsletter-box { gap: 25px; }
+      .fit-glance { grid-template-columns: repeat(2, 1fr); }
+      .fit-grid, .fit-cta { grid-template-columns: 1fr; }
     }
     @media (max-width: 760px) {
       body { padding-bottom: 76px; }
@@ -378,6 +472,7 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .footer-brand { grid-column: span 2; }
       .newsletter-box { padding: 30px 24px; box-shadow: 8px 8px 0 var(--ink); }
+      .service-grid { grid-template-columns: 1fr; }
       .mobile-dock { position: fixed; left: 12px; right: 12px; bottom: 10px; z-index: 18; display: grid; grid-template-columns: repeat(3, 1fr); padding: 7px; border: 1px solid rgba(255,255,255,.13); border-radius: 18px; color: white; background: rgba(21,35,27,.94); box-shadow: 0 16px 40px rgba(21,35,27,.25); backdrop-filter: blur(16px); }
       .mobile-dock a { min-height: 46px; display: grid; place-items: center; border-radius: 12px; font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
       .mobile-dock a:nth-child(2) { color: var(--ink); background: var(--acid); }
@@ -402,6 +497,8 @@
       .protein-board { padding: 20px; }
       .protein-grid { grid-template-columns: 1fr; }
       .protein-card { min-height: 165px; }
+      .fit-glance { grid-template-columns: 1fr; }
+      .fit-panel { padding: 24px 18px; box-shadow: 7px 7px 0 var(--acid); }
       .work-grid, .culture-grid { grid-template-columns: 1fr; }
       .service-grid { grid-template-columns: 1fr; }
       .work-card { min-height: 225px; }
@@ -420,17 +517,16 @@
   </style>
 </head>
 <body>
-  <div class="disclosure">TRANSPARENT: Mit <span aria-hidden="true">*</span> markierte Links können Affiliate-Links werden. Du zahlst nie mehr. <a href="#transparenz">So funktioniert’s</a></div>
-
   <nav aria-label="Hauptnavigation">
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Michael Ninh Startseite"><span class="brand-dot"></span>MICHAEL NINH.</a>
       <div class="nav-links">
         <a href="#work">Work</a>
-        <a href="#ideas">Ideas</a>
+        <a href="#fit">For teams</a>
         <a href="#stack">Staples</a>
-        <a href="#culture">Culture</a>
-        <a class="nav-pill" href="#partners">Für Hersteller</a>
+        <a href="#culture">Inspiration</a>
+        <a href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn</a>
+        <a class="nav-pill" href="#partners">Kontakt</a>
       </div>
     </div>
   </nav>
@@ -439,20 +535,25 @@
     <header class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="kicker">Michael Ninh · AI Engineer · Builder · Foodie</div>
-          <h1>Building a <em>more human future.</em></h1>
-          <p class="lead">Mein lebendiger Index: was ich baue, worüber ich nachdenke, was ich esse, teste, lese und liebe — und welche Zukunft ich mitgestalten möchte.</p>
+          <div class="kicker">Michael Ninh · AI Engineer · Berlin</div>
+          <h1>I build useful AI.<em>I share what holds up.</em></h1>
+          <p class="lead">Ich entwickle offene AI- und Civic-Tech-Systeme für echte Menschen — und teste vegane Produkte mit Freund:innen. Empfohlen wird nur, was ich selbst nachkaufen würde.</p>
           <div class="hero-actions">
-            <a class="btn btn-acid" href="#work">Explore my work <span class="arrow">↘</span></a>
-            <a class="btn btn-ghost" href="#stack">My staples</a>
+            <a class="btn btn-acid" href="#work">Selected work <span class="arrow">↘</span></a>
+            <a class="btn btn-ghost" href="#fit">Find the fit</a>
           </div>
-          <div class="creator"><div class="creator-avatar" aria-hidden="true">MN</div><div class="creator-copy"><strong>Hey, ich bin Michael.</strong><span>Vegan · longevity-curious · interessiert an guten Produkten, nicht an leeren Health-Hypes.</span></div></div>
+          <div class="social-links" aria-label="Michael online">
+            <a class="social-link" href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn ↗</a>
+            <a class="social-link" href="https://github.com/mikelninh" target="_blank" rel="me noopener">GitHub ↗</a>
+            <a class="social-link" href="https://www.instagram.com/mikel.ninh/" target="_blank" rel="me noopener">Instagram ↗</a>
+            <a class="social-link" href="#fit"><span class="status-dot"></span>Looking for my next team</a>
+          </div>
           <div class="quick-picks" id="start-here" aria-label="Schnelleinstieg">
-            <a class="quick-pick" href="#work" style="--quick-color:#e2ddd3"><b>01</b><span><strong>What I build</strong><small>AI + products</small></span></a>
-            <a class="quick-pick" href="#ideas" style="--quick-color:#dbe1dc"><b>02</b><span><strong>What I think</strong><small>AI + future</small></span></a>
-            <a class="quick-pick" href="#stack" style="--quick-color:#e2ddd3"><b>03</b><span><strong>What I use</strong><small>Vegan staples</small></span></a>
+            <a class="quick-pick" href="#work" style="--quick-color:#e2ddd3"><b>01</b><span><strong>AI work</strong><small>Code + live systems</small></span></a>
+            <a class="quick-pick" href="#stack" style="--quick-color:#dbe1dc"><b>02</b><span><strong>Vegan staples</strong><small>What I actually use</small></span></a>
+            <a class="quick-pick" href="#partners" style="--quick-color:#e2ddd3"><b>03</b><span><strong>Blind tastings</strong><small>For food brands</small></span></a>
           </div>
-          <div class="tiny">Persönliche Auswahl · evidenzorientiert · keine bezahlten Rankings</div>
+          <div class="tiny">Berlin · Deutsch / English / Tiếng Việt · open source · keine bezahlten Rankings</div>
         </div>
         <div class="stack-stage" aria-label="Illustration von Michaels Arbeit, Empfehlungen und Ideen">
           <div class="stage-orbit"></div>
@@ -475,13 +576,61 @@
       <div class="wrap">
         <div class="section-head">
           <div><span class="section-no">01 / WHAT I BUILD</span><h2>Useful things.<br>Real people.</h2></div>
-          <p class="section-copy">Ich bin AI Engineer und Produktmensch. Mich interessieren keine Demos um der Demo willen, sondern offene, verständliche Systeme, die Menschen wirklich helfen.</p>
+          <p class="section-copy">Vier ausgewählte Systeme, die zeigen, wie ich arbeite: komplexe Probleme verstehen, mit AI vereinfachen, Ergebnisse prüfbar machen und offen teilen.</p>
         </div>
         <div class="work-grid">
-          <article class="work-card"><span class="work-type">Legal AI · Open source</span><h3>GitLaw</h3><p>Gesetze, Änderungen und öffentliche Entscheidungen nachvollziehbarer machen — mit transparenter Versionslogik statt Black Box.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
-          <article class="work-card"><span class="work-type">Safety · Human-centered AI</span><h3>SafeVoice</h3><p>Strukturierte, sichere Wege, um sensible Erfahrungen festzuhalten und nächste Schritte verständlicher zu machen.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
-          <article class="work-card"><span class="work-type">MCP · Reusable infrastructure</span><h3>Recht-MCP</h3><p>Wiederverwendbare Werkzeuge, damit andere Agenten und Anwendungen verlässlicher mit Recht und öffentlichen Informationen arbeiten können.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
-          <article class="work-card"><span class="work-type">AI operations · Closed loops</span><h3>INCA Loop</h3><p>Von unstrukturiertem Input zu überprüfbaren Ergebnissen: mehrstufige AI-Workflows mit klaren Outputs, Feedback und Verbesserungsschleifen.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
+          <article class="work-card">
+            <span class="work-type">Legal AI · RAG · Open source</span><h3>GitLaw</h3>
+            <p>Deutsches Recht durchsuchbar, verständlich und zitierbar machen — für Bürger:innen und Kanzleien.</p>
+            <div class="proof-line"><span>5.936 Gesetze</span><span>53/53 Citation Evals</span><span>Live pilot</span></div>
+            <details class="work-more"><summary>Wie es funktioniert</summary><p>Hybrid Retrieval, FAISS, ein 94K-Knoten-Zitationsgraph und ein MCP-Server prüfen Antworten gegen den echten Gesetzeskorpus.</p></details>
+            <div class="work-actions"><a href="https://gitlaw-xi.vercel.app/" target="_blank" rel="noopener">Live ansehen ↗</a><a href="https://github.com/mikelninh/gitlaw" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="work-card">
+            <span class="work-type">Human-centered AI · Safety</span><h3>SafeVoice</h3>
+            <p>Digitale Belästigung dokumentieren und aus Beweisen einen strukturierten nächsten Schritt machen.</p>
+            <div class="proof-line"><span>35 Eval Cases</span><span>DE + EN</span><span>NGO beta</span></div>
+            <details class="work-more"><summary>Wie es funktioniert</summary><p>OpenAI Structured Outputs, Screenshot-OCR, SHA-256-Beweisketten und ein Human-in-the-loop Court-Prep-Agent.</p></details>
+            <div class="work-actions"><a href="https://safevoice-vert.vercel.app/" target="_blank" rel="noopener">Live ansehen ↗</a><a href="https://github.com/mikelninh/safevoice" target="_blank" rel="noopener">Code ↗</a></div>
+          </article>
+          <article class="work-card">
+            <span class="work-type">Civic tech · Policy simulation</span><h3>Gesetzes-Check</h3>
+            <p>Vorgeschlagene Gesetze daran messen, was bei Menschen wirklich ankommt: Wer profitiert, wer zahlt, wer wird übersehen?</p>
+            <div class="proof-line"><span>Verteilung</span><span>Zugang</span><span>Public value</span></div>
+            <details class="work-more"><summary>Was geprüft wird</summary><p>Stabilität, Zugang, Verteilungswirkung und öffentlicher Wert werden vor politischen Absichten sichtbar gemacht — als verständliche, interaktive Simulation.</p></details>
+            <div class="work-actions"><a href="https://impact-sprint-good.hyperspacekid.chatgpt.site/gesetzes-check" target="_blank" rel="noopener">Prototyp ↗</a><a href="https://github.com/mikelninh/human-systems-lab" target="_blank" rel="noopener">Studio ↗</a></div>
+          </article>
+          <article class="work-card">
+            <span class="work-type">MCP · Reusable infrastructure</span><h3>Civic AI Toolkit</h3>
+            <p>Ein gemeinsames Fundament, mit dem neue MCP-Server für Recht und öffentliche Dienste schneller entstehen.</p>
+            <div class="proof-line"><span>6 MCPs</span><span>19/19 Tests</span><span>MIT</span></div>
+            <details class="work-more"><summary>Warum es wichtig ist</summary><p>Server-Factory, strukturierte Logs, Error Envelopes, Fixtures und CLI-Scaffolding machen aus Einzellösungen wiederverwendbare Infrastruktur.</p></details>
+            <div class="work-actions"><a href="https://github.com/mikelninh/civic-ai-mcp-toolkit" target="_blank" rel="noopener">Code ansehen ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="fit">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="section-no">02 / LOOKING FOR MY NEXT TEAM</span><h2>Let’s find<br>the right fit.</h2></div>
+          <p class="section-copy">Ich suche aktuell einen neuen Arbeitgeber oder ein Team, das ich als hands-on AI Engineer unterstützen kann — mit Ownership vom echten Problem bis zum funktionierenden Produkt.</p>
+        </div>
+        <div class="fit-panel">
+          <div class="fit-glance">
+            <div><small>Roles</small><strong>AI Engineer · Applied AI · AI Product Engineer · AI Operations</strong></div>
+            <div><small>Location</small><strong>Berlin hybrid oder remote in Deutschland / EU</strong></div>
+            <div><small>Best problems</small><strong>Agents · RAG · Document AI · Civic Tech · Workflows</strong></div>
+            <div><small>Availability</small><strong>Offen für Festanstellung, Contract oder einen fokussierten Pilot</strong></div>
+          </div>
+          <div class="fit-grid">
+            <article class="fit-card"><h3>Was ich beitragen kann</h3><p>Komplexe Nutzerprobleme verstehen, schnell einen ehrlichen Prototyp bauen und daraus ein überprüfbares AI-System mit Evals, Guardrails und klaren Outputs machen.</p></article>
+            <article class="fit-card"><h3>Wo ich aufblühe</h3><p>In einem freundlichen, neugierigen und ambitionierten Team mit Vertrauen, direktem Nutzerkontakt, ehrlichem Feedback und Raum, Verantwortung zu übernehmen.</p></article>
+            <article class="fit-card"><h3>Wofür ich brenne</h3><p>AI, die Handlungsfähigkeit erhöht: bessere öffentliche Dienste, humane Workflows, Gesundheit, Bildung, Demokratie, Nachhaltigkeit und mission-driven Produkte.</p></article>
+          </div>
+          <div class="fit-stack" aria-label="Technischer Schwerpunkt"><span>Python</span><span>FastAPI</span><span>LLMs</span><span>RAG</span><span>AI Agents</span><span>MCP</span><span>Structured Outputs</span><span>Evals</span><span>React</span><span>TypeScript</span><span>DE / EN / VI</span></div>
+          <div class="fit-cta"><p><strong>Du bist nicht sicher, ob es passt?</strong> Schick mir einfach die Rolle, euer Problem oder die Idee. Ich antworte ehrlich, wo ich sofort helfen kann und wo der Fit nicht stark genug ist.</p><div class="contact-actions"><a class="btn btn-acid" href="mailto:mikel_ninh@yahoo.de?subject=Team%20Fit%20mit%20Michael%20Ninh">Rolle senden</a><a class="btn btn-ghost" href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn message ↗</a></div></div>
         </div>
       </div>
     </section>
@@ -489,13 +638,13 @@
     <section id="ideas">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">02 / IDEAS & THE FUTURE</span><h2>Questions worth<br>building around.</h2></div>
+          <div><span class="section-no">03 / IDEAS & THE FUTURE</span><h2>Questions worth<br>building around.</h2></div>
           <p class="section-copy">Notizen und Experimente über AI, Bewusstsein, öffentliche Infrastruktur und eine Zukunft, in der Technologie mehr Freiheit und weniger Leid schafft.</p>
         </div>
         <div class="idea-strip">
-          <article class="idea"><span>01</span><h3>AI should increase agency.</h3><p>Gute AI nimmt Menschen nicht die Entscheidung ab. Sie macht Zusammenhänge sichtbar, Optionen verständlich und Handeln leichter.</p></article>
-          <article class="idea"><span>02</span><h3>Open tools compound.</h3><p>Ein gutes Projekt löst nicht nur ein Problem. Es hinterlässt Bausteine, die andere Bürger:innen, Teams und Agenten wiederverwenden können.</p></article>
-          <article class="idea"><span>03</span><h3>Intelligence needs values.</h3><p>Die spannendste Zukunft ist nicht nur intelligenter. Sie ist mitfühlender, gerechter und bewusster darin, wem Fortschritt wirklich dient.</p></article>
+          <details class="idea"><summary><span class="idea-no">01 / PRINCIPLE</span>AI should increase agency.</summary><p>Gute AI nimmt Menschen nicht die Entscheidung ab. Sie macht Zusammenhänge sichtbar, Optionen verständlich und Handeln leichter.</p></details>
+          <details class="idea"><summary><span class="idea-no">02 / OPENNESS</span>Open tools compound.</summary><p>Ein gutes Projekt löst nicht nur ein Problem. Es hinterlässt Bausteine, die andere Bürger:innen, Teams und Agenten wiederverwenden können.</p></details>
+          <details class="idea"><summary><span class="idea-no">03 / VALUES</span>Intelligence needs values.</summary><p>Die spannendste Zukunft ist nicht nur intelligenter. Sie ist mitfühlender, gerechter und bewusster darin, wem Fortschritt wirklich dient.</p></details>
         </div>
       </div>
     </section>
@@ -503,7 +652,7 @@
     <section id="stack">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">03 / MY STAPLES</span><h2>What I actually<br>use & eat.</h2></div>
+          <div><span class="section-no">04 / MY STAPLES</span><h2>What I actually<br>use & eat.</h2></div>
           <p class="section-copy">Persönlicher Status statt so zu tun, als wäre alles ein Daily: Core, Berlin-Winter, Secondary oder Curious. Dazu Dosis, Evidenz und die entscheidende Frage: Würde ich es selbst wieder kaufen?</p>
         </div>
 
@@ -618,7 +767,7 @@
     <section class="protein-section" id="protein">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">04 / PROTEIN, ACTUALLY FOOD</span><h2>Strong basics.<br>No powder required.</h2></div>
+          <div><span class="section-no">05 / PROTEIN, ACTUALLY FOOD</span><h2>Strong basics.<br>No powder required.</h2></div>
           <p class="section-copy">Typische Proteinwerte als schnelle Orientierung. Produkte unterscheiden sich — bei meinen späteren Supermarkt-Picks zählt deshalb immer das konkrete Etikett.</p>
         </div>
         <div class="protein-board">
@@ -627,10 +776,11 @@
             <article class="protein-card"><small>Versatile staple</small><h3>Tofu</h3><div class="protein-number">12–18 g</div><p>pro 100 g · 200 g liefern je nach Produkt ungefähr 24–36 g.</p></article>
             <article class="protein-card"><small>Fermented soy</small><h3>Tempeh</h3><div class="protein-number">18–21 g</div><p>pro 100 g · kräftiger, fester und für mich einer der spannendsten Protein-Staples.</p></article>
             <article class="protein-card"><small>Wheat protein</small><h3>Seitan</h3><div class="protein-number">24–30 g</div><p>pro 100 g · sehr proteinreich, aber kein vollständiger Ersatz für abwechslungsreiche Quellen.</p></article>
-            <article class="protein-card"><small>Whole soy bean</small><h3>Edamame</h3><div class="protein-number">11–13 g</div><p>pro 100 g · Snack, Bowl-Topping und vollwertige Sojaquelle.</p></article>
+            <article class="protein-card"><small>Gekocht / tiefgekühlt</small><h3>Edamame</h3><div class="protein-number">11–13 g</div><p>pro 100 g · der typische Wert für wasserreiche, gekochte Edamame.</p></article>
+            <article class="protein-card"><small>KoRo · geröstet</small><h3>Edamame Snack</h3><div class="protein-number">44 g</div><p>pro 100 g laut aktuellem Etikett. Durch Trocknung nicht 1:1 mit gekochten Edamame vergleichbar. <a href="https://www.koro.com/lude/geroestete-und-gesalzene-edamame-bohnen-750-g" target="_blank" rel="noopener"><u>Produkt prüfen ↗</u></a></p></article>
             <article class="protein-card"><small>Dry weight</small><h3>Sojagranulat / TVP</h3><div class="protein-number">45–55 g</div><p>pro 100 g trocken · extrem effizient; nach dem Einweichen ist der Wert pro 100 g niedriger.</p></article>
           </div>
-          <div class="protein-note"><span>Werte sind realistische Produktbereiche, keine exakten Angaben für jede Marke. Portions- und Trockenangaben nicht vermischen.</span><span>Quellen: <a href="https://www.blsdb.de/" target="_blank" rel="noopener">Bundeslebensmittelschlüssel ↗</a> · <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central ↗</a></span></div>
+          <div class="protein-note"><span>Werte sind realistische Produktbereiche, keine exakten Angaben für jede Marke. Wasserreiche, getrocknete und geröstete Produkte nicht direkt vergleichen.</span><span>Quellen: <a href="https://www.blsdb.de/" target="_blank" rel="noopener">BLS ↗</a> · <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA ↗</a> · <a href="https://www.koro.com/lude/geroestete-und-gesalzene-edamame-bohnen-750-g" target="_blank" rel="noopener">KoRo-Etikett ↗</a></span></div>
           <div class="future-shelf" id="future-shelf"><strong>Next: Michael’s supermarket shelf</strong><p>Meine konkreten Lieblingsprodukte aus REWE, EDEKA, Bio Company, dm & Co. — mit Marke, Geschmack, Zutaten, Protein pro Portion, Preis, Protein pro Euro, „würde ich nachkaufen?“ und Kauf-/Affiliate-Link, wenn ich wirklich dahinterstehe.</p></div>
         </div>
       </div>
@@ -638,7 +788,7 @@
 
     <section class="manifesto" id="standard">
       <div class="wrap manifesto-grid">
-        <div><span class="section-no">05 / THE TABLE TEST</span><h2>Would I buy<br>it again?</h2></div>
+        <div><span class="section-no">06 / THE TABLE TEST</span><h2>Would I buy<br>it again?</h2></div>
         <div class="rules">
           <div class="rule"><span>01</span><div><h3>Wir probieren es wirklich.</h3><p>Ich teste selbst — bei Food gern gemeinsam mit meinem Partner oder meiner Partnerin und Freund:innen. Mehrere ehrliche Geschmäcker sind wertvoller als ein perfektes Werbe-Zitat.</p></div></div>
           <div class="rule"><span>02</span><div><h3>Ein nachvollziehbarer Score.</h3><p>Geschmack · Zutaten · Nährwerte bzw. Evidenz · Preis-Leistung · Alltagstauglichkeit. Gesponserte Samples werden immer sichtbar offengelegt.</p></div></div>
@@ -651,7 +801,7 @@
     <section id="frontier">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">06 / CONSCIOUS FRONTIER</span><h2>Fascinated.<br>Not careless.</h2></div>
+          <div><span class="section-no">07 / CONSCIOUS FRONTIER</span><h2>Fascinated.<br>Not careless.</h2></div>
           <p class="section-copy">LSD und Psilocybin faszinieren mich persönlich und wissenschaftlich. Gerade deshalb trenne ich Forschung, Legalität und kommerzielles Interesse sauber voneinander.</p>
         </div>
         <div class="not-list frontier-list">
@@ -665,11 +815,11 @@
     <section id="culture">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">07 / CULTURE SHELF</span><h2>Things I keep<br>returning to.</h2></div>
+          <div><span class="section-no">08 / CULTURE SHELF</span><h2>Things I keep<br>returning to.</h2></div>
           <p class="section-copy">Keine algorithmische Top-10-Liste. Bücher, Filme, Lehrer:innen und Dokumentationen, die etwas in mir bewegt oder meine Sicht auf die Welt erweitert haben.</p>
         </div>
         <div class="culture-grid">
-          <article class="culture-card"><small>Film</small><h3>Past Lives</h3><p>Über Identität, Timing, Liebe und die Leben, die wir nicht gelebt haben.</p></article>
+          <article class="culture-card"><small>Documentary · free</small><h3>Dominion</h3><p>Eine kompromisslose Dokumentation über Tierausbeutung und einer der Gründe, warum Veganismus für mich eine ethische Frage ist. Hinweis: grafische Aufnahmen.</p><a class="culture-link" href="https://www.dominionmovement.com/watch" target="_blank" rel="noopener">Kostenlos ansehen ↗</a></article>
           <article class="culture-card"><small>Book</small><h3>A New Earth</h3><p>Eckhart Tolle über Ego, Gegenwärtigkeit und einen bewussteren Umgang mit dem eigenen Denken.</p></article>
           <article class="culture-card"><small>Timeless text</small><h3>Bhagavad Gita</h3><p>Dharma, Handeln ohne Anhaftung und die Frage, wie wir mitten im Leben klar bleiben.</p></article>
           <article class="culture-card"><small>Teacher & writing</small><h3>Thich Nhat Hanh</h3><p>Mitgefühl und Achtsamkeit nicht als Flucht, sondern als gelebte Praxis.</p></article>
@@ -682,7 +832,7 @@
       <div class="wrap">
         <div class="vision-panel">
           <blockquote>Human flourishing. Planetary health. Conscious freedom. Love at scale.</blockquote>
-          <div class="vision-copy"><span class="mono">08 / MY NORTH STAR</span><p>Ich möchte Technologie, Produkte und Geschichten bauen, die Freiheit vergrößern, Leid reduzieren und Menschen helfen, bewusster zu leben — ohne den Planeten oder andere Lebewesen als Nebensache zu behandeln.</p><p>Education + technology + compassion.</p></div>
+          <div class="vision-copy"><span class="mono">09 / MY NORTH STAR</span><p>Ich möchte Technologie, Produkte und Geschichten bauen, die Freiheit vergrößern, Leid reduzieren und Menschen helfen, bewusster zu leben — ohne den Planeten oder andere Lebewesen als Nebensache zu behandeln.</p><p>Education + technology + compassion.</p></div>
         </div>
       </div>
     </section>
@@ -690,7 +840,7 @@
     <section class="newsletter" id="partners">
       <div class="wrap">
         <div class="newsletter-box">
-          <div><span class="section-no" style="color:var(--acid)">09 / FOR BRANDS & PRODUCERS</span><h2>Send it to<br>the table.</h2><p>Schickt uns euer veganes Produkt. Ich teste es gemeinsam mit meinem Partner oder meiner Partnerin und Freund:innen — wenn möglich blind, mit echten ersten Reaktionen, individuellen Verdicts und verwertbarem Feedback.</p><p>Wenn du diesen Link von mir erhalten hast, antworte einfach direkt auf meine Nachricht.</p></div>
+          <div><span class="section-no" style="color:var(--acid)">10 / WORK WITH MICHAEL</span><h2>Let’s make<br>something useful.</h2><p><strong>Für AI-Teams:</strong> Ich bin in Berlin und offen für AI-Engineering-Rollen, Projekte und mission-driven collaborations.</p><p><strong>Für Hersteller:</strong> Schickt uns euer veganes Produkt. Wir testen es wenn möglich blind — mit echten ersten Reaktionen, individuellen Verdicts und verwertbarem Feedback.</p><div class="contact-actions"><a class="btn btn-acid" href="mailto:mikel_ninh@yahoo.de?subject=Zusammenarbeit%20mit%20Michael%20Ninh">E-Mail schreiben</a><a class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.45)" href="https://www.instagram.com/mikel.ninh/" target="_blank" rel="me noopener">Instagram DM ↗</a><a class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.45)" href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn ↗</a></div></div>
           <div class="partner-brief">
             <div><b>01</b><span>Produkt zuschicken + Ziel und konkrete Fragen nennen</span></div>
             <div><b>02</b><span>Blind Tasting, wenn Verpackung und Kontext neutralisierbar sind</span></div>
@@ -732,11 +882,11 @@
   <footer>
     <div class="wrap">
       <div class="footer-grid">
-        <div class="footer-brand"><a class="brand" href="#top"><span class="brand-dot"></span>MICHAEL NINH.</a><p>AI Engineer, Builder und Foodie. Work, ideas, vegan staples, culture und eine persönliche Vision für eine menschlichere Zukunft.</p></div>
-        <div class="footer-col"><strong>Explore</strong><a href="#work">Work</a><a href="#ideas">Ideas</a><a href="#stack">Staples</a><a href="#culture">Culture</a></div>
-        <div class="footer-col"><strong>Legal</strong><a href="#transparenz">Affiliate-Hinweis</a><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+        <div class="footer-brand"><a class="brand" href="#top"><span class="brand-dot"></span>MICHAEL NINH.</a><p>AI Engineer, Civic-Tech-Builder und veganer Foodie in Berlin. Nützliche Systeme, ehrliche Empfehlungen und eine menschlichere Zukunft.</p></div>
+        <div class="footer-col"><strong>Explore</strong><a href="#work">Selected work</a><a href="#stack">Vegan staples</a><a href="#culture">Inspiration</a><a href="#partners">Blind tastings</a></div>
+        <div class="footer-col"><strong>Connect</strong><a href="mailto:mikel_ninh@yahoo.de">E-Mail</a><a href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn ↗</a><a href="https://github.com/mikelninh" target="_blank" rel="me noopener">GitHub ↗</a><a href="https://www.instagram.com/mikel.ninh/" target="_blank" rel="me noopener">@mikel.ninh ↗</a></div>
       </div>
-      <div class="legal">Hinweis: Persönliche Empfehlungen, keine medizinische Beratung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung. Bei Mangel, Erkrankungen, Medikamenteneinnahme, Schwangerschaft oder Unsicherheit fachlich beraten lassen. Affiliate-Links müssen vor Veröffentlichung final gekennzeichnet sowie Impressum und Datenschutz ergänzt werden.</div>
+      <div class="legal">Berlin · mikel_ninh@yahoo.de · Transparenz: Mit * markierte Links können Affiliate-Links sein; der Preis bleibt gleich. Persönliche Empfehlungen, keine medizinische Beratung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung. Impressum und Datenschutz vor breiter kommerzieller Veröffentlichung ergänzen.</div>
     </div>
   </footer>
 
@@ -758,11 +908,11 @@
   <nav class="mobile-dock" aria-label="Mobile Schnellnavigation">
     <a href="#work">Work</a>
     <a href="#stack">Staples</a>
-    <a href="#partners">Partner</a>
+    <a href="#partners">Kontakt</a>
   </nav>
 
   <script>
-    // Echte Partner-URLs hier eintragen. Leere Werte öffnen transparent den Platzhalter-Dialog.
+    // Echte Partner-URLs hier eintragen. Leere Picks bleiben unsichtbar, bis Michael wirklich ein YES vergeben hat.
     const AFFILIATE_LINKS = {
       omega3: "",
       vitamind: "",
@@ -984,11 +1134,7 @@
         link.target = '_blank';
         link.rel = 'sponsored noopener';
       } else {
-        link.addEventListener('click', event => {
-          event.preventDefault();
-          modal.classList.add('open');
-          document.getElementById('closeModal').focus();
-        });
+        link.hidden = true;
       }
     });
 

@@ -437,6 +437,87 @@
     .guide-sources a { font-size: 13px; }
     .guide-note { font-size: 12px !important; }
 
+    /* Guided journey */
+    html { scroll-snap-type: y proximity; scroll-padding-top: 82px; }
+    main > section { scroll-snap-align: start; scroll-margin-top: 82px; }
+    .scroll-progress { position: fixed; inset: 0 auto auto 0; z-index: 40; width: 0; height: 3px; background: var(--orange); box-shadow: 0 0 16px rgba(139,111,88,.45); pointer-events: none; }
+    .journey-hud { position: fixed; right: 18px; bottom: 18px; z-index: 17; min-width: 205px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; padding: 9px 10px 9px 13px; border: 1px solid rgba(255,255,255,.16); border-radius: 16px; color: white; background: rgba(27,33,28,.92); box-shadow: 0 16px 45px rgba(21,35,27,.22); backdrop-filter: blur(16px); }
+    .journey-hud small { color: var(--acid); font: 500 9px "DM Mono", monospace; }
+    .journey-hud strong { overflow: hidden; font-size: 11px; white-space: nowrap; text-overflow: ellipsis; }
+    .journey-hud button { min-height: 32px; padding: 0 10px; border: 1px solid rgba(255,255,255,.2); border-radius: 10px; color: white; background: transparent; font-size: 10px; cursor: pointer; }
+    .journey-hud button:hover { color: var(--ink); background: var(--acid); }
+    .share-toast { position: fixed; left: 50%; bottom: 26px; z-index: 60; padding: 11px 15px; border-radius: 999px; color: white; background: var(--ink); box-shadow: var(--shadow); font-size: 12px; opacity: 0; pointer-events: none; transform: translate(-50%, 12px); transition: .25s ease; }
+    .share-toast.show { opacity: 1; transform: translate(-50%, 0); }
+    .motion-ready main > section > .wrap { opacity: .58; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    .motion-ready main > section.is-visible > .wrap { opacity: 1; transform: none; }
+
+    /* Visitor routes */
+    .audience-switch { max-width: 680px; margin-top: 26px; padding: 18px; border: 1px solid var(--line); border-radius: 19px; background: rgba(251,250,246,.72); }
+    .audience-switch > strong { display: block; margin-bottom: 11px; font-size: 13px; }
+    .audience-options { display: flex; flex-wrap: wrap; gap: 7px; }
+    .audience-option { min-height: 35px; padding: 0 11px; border: 1px solid var(--line); border-radius: 999px; background: transparent; font-size: 11px; font-weight: 700; cursor: pointer; }
+    .audience-option:hover, .audience-option.active { color: white; border-color: var(--ink); background: var(--ink); }
+    .audience-route { display: grid; grid-template-columns: 1fr auto; gap: 15px; align-items: center; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .audience-route p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+    .audience-route a { min-height: 36px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 999px; color: var(--ink); background: var(--acid); font-size: 11px; font-weight: 800; }
+
+    /* B12 interactive explainer */
+    .b12-lab { display: grid; grid-template-columns: .85fr 1.15fr; gap: 34px; align-items: center; margin-top: 24px; padding: clamp(28px,5vw,52px); border: 2px solid var(--ink); border-radius: 30px; color: white; background: var(--ink); box-shadow: 12px 12px 0 var(--acid); }
+    .b12-lab h3 { margin: 10px 0 12px; color: var(--acid); font-size: clamp(31px,4vw,54px); line-height: .96; letter-spacing: -.055em; }
+    .b12-lab-copy p { max-width: 500px; margin: 0; color: #cbd2cc; font-size: 15px; line-height: 1.7; }
+    .b12-console { padding: 24px; border: 1px solid rgba(255,255,255,.2); border-radius: 22px; background: rgba(255,255,255,.07); }
+    .b12-readout { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 19px; }
+    .b12-readout div { padding: 15px; border-radius: 15px; background: rgba(255,255,255,.08); }
+    .b12-readout small { display: block; margin-bottom: 8px; color: #aeb9b1; font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .b12-readout strong { display: block; color: white; font-size: 25px; letter-spacing: -.04em; }
+    .b12-slider { width: 100%; accent-color: var(--acid); cursor: grab; }
+    .b12-scale { display: flex; justify-content: space-between; margin-top: 7px; color: #aeb9b1; font: 500 8px "DM Mono", monospace; }
+    .b12-reaction { min-height: 52px; margin-top: 16px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.16); color: var(--acid); font-size: 13px; line-height: 1.55; }
+    .b12-caveat { display: block; margin-top: 12px; color: #aeb9b1; font-size: 10px; line-height: 1.5; }
+
+    /* Verdict reveal */
+    .verdict-playground { margin-top: 65px; padding-top: 45px; border-top: 1px solid rgba(255,255,255,.16); }
+    .verdict-playground-head { display: flex; justify-content: space-between; gap: 25px; align-items: end; margin-bottom: 20px; }
+    .verdict-playground-head h3 { margin: 0; color: white; font-size: 34px; }
+    .verdict-playground-head p { max-width: 480px; margin: 0; color: #aeb9b1; font-size: 14px; line-height: 1.6; }
+    .verdict-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 11px; }
+    .verdict-card { min-height: 210px; padding: 23px; border: 1px solid rgba(255,255,255,.18); border-radius: 20px; color: white; background: rgba(255,255,255,.06); cursor: pointer; perspective: 800px; }
+    .verdict-card:hover { background: rgba(255,255,255,.1); }
+    .verdict-card small { color: var(--orange); font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
+    .verdict-card h4 { margin: 42px 0 10px; font-size: 23px; }
+    .verdict-front p, .verdict-back p { margin: 0; color: #aeb9b1; font-size: 13px; line-height: 1.6; }
+    .verdict-back { display: none; }
+    .verdict-card.revealed .verdict-front { display: none; }
+    .verdict-card.revealed .verdict-back { display: block; animation: verdictIn .35s ease both; }
+    .verdict-word { display: block; margin: 34px 0 10px; color: var(--acid); font-size: 48px; font-weight: 800; line-height: .9; letter-spacing: -.07em; }
+    @keyframes verdictIn { from { opacity: 0; transform: rotateX(-8deg) translateY(8px); } }
+
+    /* Drag-to-table brand moment */
+    .brand-play { display: grid; grid-template-columns: .7fr 1.3fr; gap: 18px; margin-top: 18px; }
+    .sample-tray, .tasting-table { min-height: 290px; padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: var(--white); }
+    .sample-tray { display: grid; place-items: center; text-align: center; }
+    .sample-pack { width: 142px; height: 178px; display: flex; flex-direction: column; justify-content: space-between; padding: 17px; border: 2px solid var(--ink); border-radius: 18px 18px 30px 30px; background: var(--acid); box-shadow: 9px 9px 0 var(--ink); cursor: grab; transform: rotate(-4deg); transition: transform .25s; }
+    .sample-pack:hover { transform: rotate(1deg) translateY(-4px); }
+    .sample-pack:active { cursor: grabbing; }
+    .sample-pack small { font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .sample-pack strong { font-size: 33px; line-height: .9; letter-spacing: -.06em; }
+    .sample-tray p { max-width: 270px; margin: 24px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .tasting-table { position: relative; overflow: hidden; border-style: dashed; transition: .25s; }
+    .tasting-table.drag-over { border-color: var(--ink); background: #ebeedd; transform: scale(.995); }
+    .tasting-table h3 { margin: 0 0 8px; font-size: 29px; }
+    .tasting-table > p { margin: 0; color: var(--muted); font-size: 14px; }
+    .table-steps { display: grid; grid-template-columns: repeat(5,1fr); gap: 7px; margin-top: 43px; }
+    .table-step { min-height: 90px; padding: 12px; border-radius: 13px; color: var(--muted); background: #f0eee7; opacity: .45; transform: translateY(8px); transition: .35s ease; }
+    .table-step b { display: block; margin-bottom: 12px; color: var(--orange); font: 500 9px "DM Mono", monospace; }
+    .table-step span { font-size: 11px; line-height: 1.4; }
+    .tasting-table.activated .table-step { opacity: 1; transform: none; }
+    .tasting-table.activated .table-step:nth-child(2) { transition-delay: .1s; }
+    .tasting-table.activated .table-step:nth-child(3) { transition-delay: .2s; }
+    .tasting-table.activated .table-step:nth-child(4) { transition-delay: .3s; }
+    .tasting-table.activated .table-step:nth-child(5) { transition-delay: .4s; }
+    .table-result { margin-top: 18px; color: var(--ink); font-size: 14px; font-weight: 800; opacity: 0; transition: opacity .3s .5s; }
+    .tasting-table.activated .table-result { opacity: 1; }
+
     @media (max-width: 980px) {
       .hero-grid, .manifesto-grid, .newsletter-box { grid-template-columns: 1fr; }
       .hero { min-height: auto; }
@@ -447,6 +528,7 @@
       .newsletter-box { gap: 25px; }
       .fit-glance { grid-template-columns: repeat(2, 1fr); }
       .fit-grid, .fit-cta { grid-template-columns: 1fr; }
+      .b12-lab, .brand-play { grid-template-columns: 1fr; }
     }
     @media (max-width: 760px) {
       body { padding-bottom: 76px; }
@@ -473,6 +555,9 @@
       .footer-brand { grid-column: span 2; }
       .newsletter-box { padding: 30px 24px; box-shadow: 8px 8px 0 var(--ink); }
       .service-grid { grid-template-columns: 1fr; }
+      .verdict-grid { grid-template-columns: 1fr; }
+      .verdict-card { min-height: 175px; }
+      .table-steps { grid-template-columns: 1fr 1fr; }
       .mobile-dock { position: fixed; left: 12px; right: 12px; bottom: 10px; z-index: 18; display: grid; grid-template-columns: repeat(3, 1fr); padding: 7px; border: 1px solid rgba(255,255,255,.13); border-radius: 18px; color: white; background: rgba(21,35,27,.94); box-shadow: 0 16px 40px rgba(21,35,27,.25); backdrop-filter: blur(16px); }
       .mobile-dock a { min-height: 46px; display: grid; place-items: center; border-radius: 12px; font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
       .mobile-dock a:nth-child(2) { color: var(--ink); background: var(--acid); }
@@ -499,6 +584,12 @@
       .protein-card { min-height: 165px; }
       .fit-glance { grid-template-columns: 1fr; }
       .fit-panel { padding: 24px 18px; box-shadow: 7px 7px 0 var(--acid); }
+      .audience-route { grid-template-columns: 1fr; }
+      .b12-lab { padding: 27px 20px; box-shadow: 7px 7px 0 var(--acid); }
+      .b12-readout { grid-template-columns: 1fr; }
+      .verdict-playground-head { align-items: start; flex-direction: column; }
+      .journey-hud { left: 12px; right: 12px; bottom: 72px; min-width: 0; }
+      .share-toast { bottom: 132px; }
       .work-grid, .culture-grid { grid-template-columns: 1fr; }
       .service-grid { grid-template-columns: 1fr; }
       .work-card { min-height: 225px; }
@@ -517,6 +608,12 @@
   </style>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="journey-hud" aria-live="polite">
+    <small id="journeyStep">START</small><strong id="journeyTitle">Michael Ninh</strong><button type="button" id="shareView">Share ↗</button>
+  </div>
+  <div class="share-toast" id="shareToast" role="status">Link kopiert — screenshot optional.</div>
+
   <nav aria-label="Hauptnavigation">
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Michael Ninh Startseite"><span class="brand-dot"></span>MICHAEL NINH.</a>
@@ -552,6 +649,16 @@
             <a class="quick-pick" href="#work" style="--quick-color:#e2ddd3"><b>01</b><span><strong>AI work</strong><small>Code + live systems</small></span></a>
             <a class="quick-pick" href="#stack" style="--quick-color:#dbe1dc"><b>02</b><span><strong>Vegan staples</strong><small>What I actually use</small></span></a>
             <a class="quick-pick" href="#partners" style="--quick-color:#e2ddd3"><b>03</b><span><strong>Blind tastings</strong><small>For food brands</small></span></a>
+          </div>
+          <div class="audience-switch" aria-labelledby="audienceQuestion">
+            <strong id="audienceQuestion">What brought you here?</strong>
+            <div class="audience-options" role="group" aria-label="Besucherroute wählen">
+              <button class="audience-option" type="button" data-audience="hire">I might hire Michael</button>
+              <button class="audience-option" type="button" data-audience="brand">I make a product</button>
+              <button class="audience-option" type="button" data-audience="instagram">From Instagram</button>
+              <button class="audience-option active" type="button" data-audience="curious">Just curious</button>
+            </div>
+            <div class="audience-route"><p id="audienceMessage">Start with the ideas, wander through the staples, stay for the slightly existential ending.</p><a id="audienceCta" href="#ideas">Start exploring ↘</a></div>
           </div>
           <div class="tiny">Berlin · Deutsch / English / Tiếng Việt · open source · keine bezahlten Rankings</div>
         </div>
@@ -761,6 +868,16 @@
             </div>
           </article>
         </div>
+        <div class="b12-lab" id="b12-playground">
+          <div class="b12-lab-copy"><span class="section-no" style="color:var(--orange)">INTERACTIVE / B12 ABSORPTION</span><h3>Big dose.<br>Small percentage.</h3><p>Zieh den Regler durch typische Supplement-Dosen. Die Aufnahme steigt nicht proportional mit der Zahl auf der Packung — genau deshalb wirken 500 µg dramatischer, als sie physiologisch sind.</p></div>
+          <div class="b12-console">
+            <div class="b12-readout"><div><small>Dosis auf dem Etikett</small><strong id="b12Dose">25 µg</strong></div><div><small>Einordnung der Aufnahme</small><strong id="b12Absorption">kleiner Anteil</strong></div></div>
+            <input class="b12-slider" id="b12Slider" type="range" min="0" max="5" value="3" step="1" aria-label="B12-Dosis auswählen">
+            <div class="b12-scale" aria-hidden="true"><span>2,5</span><span>4</span><span>10</span><span>25</span><span>100</span><span>500 µg</span></div>
+            <div class="b12-reaction" id="b12Reaction">Mein pragmatischer Daily-Default: genug Puffer, keine Zahlenakrobatik.</div>
+            <small class="b12-caveat">Didaktische Einordnung, kein individueller Dosisrechner. NIH: bei 500 µg werden ungefähr 2 % bzw. rund 10 µg aufgenommen. Details und Quellen im B12-Guide.</small>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -787,13 +904,23 @@
     </section>
 
     <section class="manifesto" id="standard">
-      <div class="wrap manifesto-grid">
-        <div><span class="section-no">06 / THE TABLE TEST</span><h2>Would I buy<br>it again?</h2></div>
-        <div class="rules">
-          <div class="rule"><span>01</span><div><h3>Wir probieren es wirklich.</h3><p>Ich teste selbst — bei Food gern gemeinsam mit meinem Partner oder meiner Partnerin und Freund:innen. Mehrere ehrliche Geschmäcker sind wertvoller als ein perfektes Werbe-Zitat.</p></div></div>
-          <div class="rule"><span>02</span><div><h3>Ein nachvollziehbarer Score.</h3><p>Geschmack · Zutaten · Nährwerte bzw. Evidenz · Preis-Leistung · Alltagstauglichkeit. Gesponserte Samples werden immer sichtbar offengelegt.</p></div></div>
-          <div class="rule"><span>03</span><div><h3>Die entscheidende Frage.</h3><p><strong>Würde ich das mit meinem eigenen Geld noch einmal kaufen?</strong> Das finale Verdict ist YES, MAYBE oder NO. Ein schönes Packaging allein rettet kein Produkt.</p></div></div>
-          <div class="rule" id="transparenz"><span>04</span><div><h3>Affiliate-Link nur bei YES.</h3><p>Kein bezahltes Ranking, keine Ergebnisfreigabe durch Hersteller. Bei mit * markierten Links kann ich eine Provision erhalten; der Preis bleibt gleich. Die Kooperation verändert das Urteil nicht.</p></div></div>
+      <div class="wrap">
+        <div class="manifesto-grid">
+          <div><span class="section-no">06 / THE TABLE TEST</span><h2>Would I buy<br>it again?</h2></div>
+          <div class="rules">
+            <div class="rule"><span>01</span><div><h3>Wir probieren es wirklich.</h3><p>Ich teste selbst — bei Food gern gemeinsam mit meinem Partner oder meiner Partnerin und Freund:innen. Mehrere ehrliche Geschmäcker sind wertvoller als ein perfektes Werbe-Zitat.</p></div></div>
+            <div class="rule"><span>02</span><div><h3>Ein nachvollziehbarer Score.</h3><p>Geschmack · Zutaten · Nährwerte bzw. Evidenz · Preis-Leistung · Alltagstauglichkeit. Gesponserte Samples werden immer sichtbar offengelegt.</p></div></div>
+            <div class="rule"><span>03</span><div><h3>Die entscheidende Frage.</h3><p><strong>Würde ich das mit meinem eigenen Geld noch einmal kaufen?</strong> Das finale Verdict ist YES, MAYBE oder NO. Ein schönes Packaging allein rettet kein Produkt.</p></div></div>
+            <div class="rule" id="transparenz"><span>04</span><div><h3>Affiliate-Link nur bei YES.</h3><p>Kein bezahltes Ranking, keine Ergebnisfreigabe durch Hersteller. Bei mit * markierten Links kann ich eine Provision erhalten; der Preis bleibt gleich. Die Kooperation verändert das Urteil nicht.</p></div></div>
+          </div>
+        </div>
+        <div class="verdict-playground">
+          <div class="verdict-playground-head"><h3>Guess the verdict.</h3><p>Klick eine Karte. Kein Algorithmus, keine Markenfreigabe — nur Michaels tatsächlicher Status und gelegentlich unnötig ehrliche Microcopy.</p></div>
+          <div class="verdict-grid">
+            <button class="verdict-card" type="button"><span class="verdict-front"><small>Daily ritual</small><h4>Kreatin-Monohydrat</h4><p>Was glaubst du: nachkaufen oder Fitness-Tapete?</p></span><span class="verdict-back"><small>Michael’s verdict</small><span class="verdict-word">YES.</span><p>5 g täglich. Kein Zyklus. Kein neonfarbener „anabolic matrix complex“ nötig.</p></span></button>
+            <button class="verdict-card" type="button"><span class="verdict-front"><small>Current status</small><h4>Algen-Omega-3</h4><p>Wissenschaftlich interessant. Aber ist es gerade in meinem Stack?</p></span><span class="verdict-back"><small>Michael’s verdict</small><span class="verdict-word">PAUSE.</span><p>Aktuell nicht. Ein hübscher blauer Ozean auf der Packung ist noch kein Qualitätsnachweis.</p></span></button>
+            <button class="verdict-card" type="button"><span class="verdict-front"><small>Marketing test</small><h4>Pretty Packaging™</h4><p>Beige Dose, Serifenschrift, 340 % Aufpreis. Reicht das?</p></span><span class="verdict-back"><small>Michael’s verdict</small><span class="verdict-word">NO.</span><p>Typography is not a nutrient. Leider. Als Designer fände ich das auch praktischer.</p></span></button>
+          </div>
         </div>
       </div>
     </section>
@@ -874,6 +1001,10 @@
               <li>Keine Ergebnisfreigabe und kein gekauftes Ranking</li>
             </ul>
           </article>
+        </div>
+        <div class="brand-play" aria-labelledby="brandPlayTitle">
+          <div class="sample-tray"><div><div class="sample-pack" id="samplePack" draggable="true" role="button" tabindex="0" aria-describedby="sampleHint"><small>Your vegan product</small><strong>DROP<br>ME</strong><small>onto the table →</small></div><p id="sampleHint">Zieh das Sample auf den Tisch — oder klick es an. Wir haben auch Touchscreens getestet. Revolutionary.</p></div></div>
+          <div class="tasting-table" id="tastingTable"><h3 id="brandPlayTitle">The table is ready.</h3><p id="tableIntro">Was nach dem Versand passiert, sollte kein schwarzes Loch sein.</p><div class="table-steps"><div class="table-step"><b>01</b><span>Unbox</span></div><div class="table-step"><b>02</b><span>Blind taste</span></div><div class="table-step"><b>03</b><span>First reaction</span></div><div class="table-step"><b>04</b><span>Individual verdict</span></div><div class="table-step"><b>05</b><span>Would we rebuy?</span></div></div><div class="table-result" id="tableResult">Sample received. Positive review still not included. Honesty is the feature.</div></div>
         </div>
       </div>
     </section>
@@ -1135,6 +1266,194 @@
         link.rel = 'sponsored noopener';
       } else {
         link.hidden = true;
+      }
+    });
+
+    // One page, four useful routes. The choice is kept in the URL so the entry point can be shared.
+    const AUDIENCE_ROUTES = {
+      hire: {
+        message: "Start with proof, then check the fit. No ‘visionary ninja’ energy required.",
+        href: "#work",
+        label: "See the proof ↘"
+      },
+      brand: {
+        message: "See the review standard, then put your product on the table. A positive verdict is deliberately not in the package.",
+        href: "#standard",
+        label: "Test the table ↘"
+      },
+      instagram: {
+        message: "The fast route: staples, protein and verdicts. Useful before your next supermarket aisle spiral.",
+        href: "#stack",
+        label: "See my staples ↘"
+      },
+      curious: {
+        message: "Start with the ideas, wander through the staples, stay for the slightly existential ending.",
+        href: "#ideas",
+        label: "Start exploring ↘"
+      }
+    };
+
+    const audienceButtons = [...document.querySelectorAll('.audience-option')];
+    const audienceMessage = document.getElementById('audienceMessage');
+    const audienceCta = document.getElementById('audienceCta');
+    let selectedAudience = 'curious';
+
+    const selectAudience = (key, updateAddress = true) => {
+      const route = AUDIENCE_ROUTES[key];
+      if (!route) return;
+      selectedAudience = key;
+      document.body.dataset.audience = key;
+      audienceButtons.forEach(button => {
+        const isActive = button.dataset.audience === key;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+      audienceMessage.textContent = route.message;
+      audienceCta.href = route.href;
+      audienceCta.textContent = route.label;
+      if (updateAddress) {
+        const url = new URL(location.href);
+        url.searchParams.set('for', key);
+        history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+      }
+    };
+
+    audienceButtons.forEach(button => button.addEventListener('click', () => selectAudience(button.dataset.audience)));
+    const audienceFromUrl = new URL(location.href).searchParams.get('for');
+    selectAudience(AUDIENCE_ROUTES[audienceFromUrl] ? audienceFromUrl : 'curious', false);
+
+    // Soft scroll chapters: helpful orientation without trapping the reader inside full-screen slides.
+    const CHAPTER_TITLES = {
+      work: 'Selected work',
+      fit: 'The right fit',
+      ideas: 'Ideas about AI',
+      stack: 'Vegan staples',
+      protein: 'Protein, actually food',
+      standard: 'The Table Test',
+      frontier: 'Conscious frontier',
+      culture: 'Inspiration shelf',
+      vision: 'North star',
+      partners: 'Work with Michael'
+    };
+    const journeySections = [...document.querySelectorAll('main > section[id]')];
+    const journeyStep = document.getElementById('journeyStep');
+    const journeyTitle = document.getElementById('journeyTitle');
+    const scrollProgress = document.getElementById('scrollProgress');
+    let currentChapter = '';
+
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('motion-ready');
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: .08 });
+      journeySections.forEach(section => revealObserver.observe(section));
+    } else {
+      journeySections.forEach(section => section.classList.add('is-visible'));
+    }
+
+    if ('IntersectionObserver' in window) {
+      const chapterObserver = new IntersectionObserver(entries => {
+        const active = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!active) return;
+        currentChapter = active.target.id;
+        const index = journeySections.indexOf(active.target) + 1;
+        journeyStep.textContent = `${String(index).padStart(2, '0')} / ${String(journeySections.length).padStart(2, '0')}`;
+        journeyTitle.textContent = CHAPTER_TITLES[currentChapter] || currentChapter;
+      }, { rootMargin: '-28% 0px -55% 0px', threshold: [0, .1, .35] });
+      journeySections.forEach(section => chapterObserver.observe(section));
+    }
+
+    let scrollFrame = 0;
+    const updateProgress = () => {
+      const available = document.documentElement.scrollHeight - innerHeight;
+      scrollProgress.style.width = `${available > 0 ? Math.min(100, Math.max(0, scrollY / available * 100)) : 0}%`;
+      scrollFrame = 0;
+    };
+    addEventListener('scroll', () => {
+      if (!scrollFrame) scrollFrame = requestAnimationFrame(updateProgress);
+    }, { passive: true });
+    updateProgress();
+
+    const shareToast = document.getElementById('shareToast');
+    let toastTimer;
+    const showShareToast = message => {
+      shareToast.textContent = message;
+      shareToast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => shareToast.classList.remove('show'), 2300);
+    };
+    document.getElementById('shareView').addEventListener('click', async () => {
+      const url = new URL(location.href);
+      url.searchParams.set('for', selectedAudience);
+      url.hash = currentChapter || '';
+      const title = currentChapter ? `${CHAPTER_TITLES[currentChapter]} — Michael Ninh` : 'Michael Ninh — Useful AI & honest recommendations';
+      try {
+        if (navigator.share) {
+          await navigator.share({ title, text: 'A useful corner of Michael Ninh’s living index.', url: url.href });
+          showShareToast('Shared. The internet has been notified.');
+        } else {
+          await navigator.clipboard.writeText(url.href);
+          showShareToast('Link copied — screenshot optional.');
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') showShareToast('Sharing took a coffee break. Copy the address bar.');
+      }
+    });
+
+    // B12 labels explain the non-linear relationship without pretending to be an individual dose calculator.
+    const B12_POINTS = [
+      { dose: '2,5 µg', absorption: 'hoher %-Anteil', reaction: 'Als alleinige Routine wäre mir das zu knapp. Eine kleine Zahl kann gut aussehen und trotzdem wenig Puffer lassen.' },
+      { dose: '4 µg', absorption: 'aktive Route', reaction: 'Der DGE-Zufuhrwert ist nicht automatisch die ideale Tablettenstärke. Referenzwert ≠ Supplementstrategie.' },
+      { dose: '10 µg', absorption: 'kleiner Anteil', reaction: 'Eine etablierte tägliche Mindeststrategie — sinnvoll, wenn sie wirklich jeden Tag passiert.' },
+      { dose: '25 µg', absorption: 'kleiner Anteil', reaction: 'Mein pragmatischer Daily-Default: genug Puffer, keine Zahlenakrobatik.' },
+      { dose: '100 µg', absorption: 'noch kleinerer %-Anteil', reaction: 'Mehr auf dem Etikett bedeutet mehr Aufnahme, aber längst nicht proportional mehr. Biology dislikes marketing math.' },
+      { dose: '500 µg', absorption: '≈ 2 % ≈ 10 µg', reaction: 'Big number, tiny percentage. Laut NIH kommen ungefähr 10 µg an — nicht 500.' }
+    ];
+    const b12Slider = document.getElementById('b12Slider');
+    const updateB12 = () => {
+      const point = B12_POINTS[Number(b12Slider.value)];
+      document.getElementById('b12Dose').textContent = point.dose;
+      document.getElementById('b12Absorption').textContent = point.absorption;
+      document.getElementById('b12Reaction').textContent = point.reaction;
+    };
+    b12Slider.addEventListener('input', updateB12);
+    updateB12();
+
+    document.querySelectorAll('.verdict-card').forEach(card => {
+      card.setAttribute('aria-pressed', 'false');
+      card.addEventListener('click', () => {
+        const revealed = card.classList.toggle('revealed');
+        card.setAttribute('aria-pressed', String(revealed));
+      });
+    });
+
+    const samplePack = document.getElementById('samplePack');
+    const tastingTable = document.getElementById('tastingTable');
+    const activateTable = () => {
+      tastingTable.classList.add('activated');
+      tastingTable.classList.remove('drag-over');
+      document.getElementById('brandPlayTitle').textContent = 'Sample accepted.';
+      document.getElementById('tableIntro').textContent = 'Here is the entire journey — including the part where people may simply not like it.';
+    };
+    samplePack.addEventListener('dragstart', event => {
+      if (event.dataTransfer) event.dataTransfer.setData('text/plain', 'vegan-sample');
+    });
+    tastingTable.addEventListener('dragover', event => {
+      event.preventDefault();
+      tastingTable.classList.add('drag-over');
+    });
+    tastingTable.addEventListener('dragleave', () => tastingTable.classList.remove('drag-over'));
+    tastingTable.addEventListener('drop', event => {
+      event.preventDefault();
+      activateTable();
+    });
+    samplePack.addEventListener('click', activateTable);
+    samplePack.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        activateTable();
       }
     });
 

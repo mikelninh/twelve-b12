@@ -1,4 +1,4 @@
-# Michael Ninh — Work, Ideas & Vegan Staples
+# Michael Ninh — Useful AI & Honest Recommendations
 
 Michael Ninhs persönliche Website als lebendiger Index: AI-Projekte, Gedanken über Technologie und Zukunft, vegane Staples, ehrliche Produkttests, Bücher, Filme und persönliche Werte.
 
@@ -6,14 +6,29 @@ Michael Ninhs persönliche Website als lebendiger Index: AI-Projekte, Gedanken �
 
 ## Struktur
 
-- **Work:** GitLaw, SafeVoice, Recht-MCP und INCA Loop
+- **Work:** GitLaw, SafeVoice, Gesetzes-Check und Civic AI Toolkit — jeweils mit echten Live-/Code-Links und Proof-Zahlen
+- **Next team:** aktive Suche nach einem Arbeitgeber oder Team mit klaren Rollen, Themen, Arbeitsweise, Stack und direkten Kontaktwegen
 - **Ideas:** AI, menschliche Handlungsfähigkeit, offene Infrastruktur und bewusste Technologie
 - **Staples:** persönlicher Status statt generischer Supplement-Liste
-- **Protein, actually food:** Sojamilch, Tofu, Tempeh, Seitan, Edamame und TVP mit typischen Proteinwerten
+- **Protein, actually food:** Sojamilch, Tofu, Tempeh, Seitan, Edamame und TVP mit typischen Proteinwerten; KoRos geröstete Edamame werden separat mit 44 g/100 g gezeigt
 - **The Table Test:** ehrliche Produkttests mit Michael, Partner:in und Freund:innen
-- **Culture:** Bücher, Filme, Dokumentationen und Lehrer:innen
+- **Culture:** Bücher, Dokumentationen und Lehrer:innen; Dominion ist direkt kostenlos verlinkt
 - **Vision:** Human flourishing · Planetary health · Conscious freedom · Love at scale
-- **Partners:** Briefing für Hersteller, Samples und transparente Affiliate-Kooperationen
+- **Contact:** AI-Engineering-Anfragen und Hersteller-Kooperationen über E-Mail, LinkedIn oder Instagram
+
+Die öffentliche Einstiegsseite ist bewusst progressiv aufgebaut: große, klare Aussagen zuerst; technische Details, Evidenz und längere Gedanken öffnen sich erst bei Bedarf.
+
+## Kontakt
+
+- Berlin
+- E-Mail: [mikel_ninh@yahoo.de](mailto:mikel_ninh@yahoo.de)
+- LinkedIn: [Michael Ninh](https://de.linkedin.com/in/michael-ninh)
+- GitHub: [mikelninh](https://github.com/mikelninh)
+- Instagram: [@mikel.ninh](https://www.instagram.com/mikel.ninh/)
+
+## Looking for the right fit
+
+Michael sucht aktuell eine Festanstellung, einen Contract oder einen fokussierten Pilot als AI Engineer, Applied AI Engineer, AI Product Engineer oder im Bereich AI Operations. Besonders passend sind Teams in Berlin oder remote in Deutschland/EU, die an Agents, RAG, Document AI, Civic Tech oder komplexen Workflows arbeiten und Wert auf Nutzerkontakt, Ownership, Evals, Guardrails und ehrliches Feedback legen.
 
 ## Persönlicher Staple-Status
 
@@ -56,7 +71,7 @@ Bezahlt wird für Durchführung und Research, nicht für ein positives Ergebnis.
 
 ## Affiliate-Links einsetzen
 
-Am Ende von `index.html` liegt der Konfigurationsblock `AFFILIATE_LINKS` für Omega-3, Vitamin D, Kreatin, Magnesium, Olivenöl und Lion’s Mane. Leere Werte öffnen einen transparenten Platzhalter-Dialog. Echte Links werden mit `rel="sponsored noopener"` gekennzeichnet.
+Am Ende von `index.html` liegt der Konfigurationsblock `AFFILIATE_LINKS` für Omega-3, Vitamin D, Kreatin, Magnesium, Olivenöl und Lion’s Mane. Leere Picks bleiben unsichtbar; erst ein echtes `YES` und eine eingetragene URL schalten den Link frei. Echte Links werden mit `rel="sponsored noopener"` gekennzeichnet.
 
 ## TWELVE B12
 
@@ -71,6 +86,6 @@ Kein Build-Schritt und keine Abhängigkeiten:
 
 ## Vor öffentlicher Vermarktung
 
-Impressum, Datenschutz, finale Affiliate-Kennzeichnung und eine echte Kontaktmöglichkeit müssen ergänzt werden. Bei eigenen Produkten kommen Markenprüfung, Lebensmittelrecht, Herstellerqualifizierung und Laborprüfung hinzu.
+Impressum, Datenschutz und finale Affiliate-Kennzeichnung müssen ergänzt werden. Bei eigenen Produkten kommen Markenprüfung, Lebensmittelrecht, Herstellerqualifizierung und Laborprüfung hinzu.
 
 Die Seite bietet persönliche Einordnung, keine medizinische Beratung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung.

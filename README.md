@@ -18,6 +18,17 @@ Michael Ninhs persönliche Website als lebendiger Index: AI-Projekte, Gedanken �
 
 Die öffentliche Einstiegsseite ist bewusst progressiv aufgebaut: große, klare Aussagen zuerst; technische Details, Evidenz und längere Gedanken öffnen sich erst bei Bedarf.
 
+## Interaktive Reise
+
+- **Visitor mode:** eigene Einstiege für Hiring Teams, Hersteller, Instagram-Besucher:innen und Neugierige; die gewählte Route steht als `?for=` im teilbaren Link
+- **Soft chapter scrolling:** sanftes Scrollen und leichtes Scroll-Snapping zwischen den zehn Kapiteln, ohne den freien Lesefluss zu blockieren
+- **Journey HUD:** zeigt das aktuelle Kapitel und teilt genau diesen Abschnitt als Deep Link
+- **B12-Lab:** interaktiver Regler für 2,5 bis 500 µg und eine verständliche Einordnung der nichtlinearen Aufnahme
+- **Guess the verdict:** klickbare Review-Karten mit echten `YES`, `PAUSE` und `NO`-Urteilen
+- **Drag to the table:** Hersteller können ein digitales Sample in den Blind-Tasting-Ablauf ziehen oder tippen
+
+Jedes Kapitel ist als eigenständiger visueller Moment angelegt: große Aussage, ausreichend Weißraum, klare Quelle oder Verdict. Damit funktionieren Abschnitte auch als Screenshot oder direkt geteilter Link.
+
 ## Kontakt
 
 - Berlin

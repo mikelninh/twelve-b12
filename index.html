@@ -4,30 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eff2e8">
-  <meta name="description" content="Mike's Vegan Staples: ehrliche, sorgfältig kuratierte Empfehlungen für B12, Omega-3, Vitamin D, Kreatin, Magnesium und mehr.">
+  <meta name="description" content="Michael Ninh's Vegan Staples: B12, Kreatin, Protein aus Soja, Lion's Mane, Vitamin D im Berliner Winter und gutes Olivenöl.">
   <link rel="canonical" href="https://stpls-vegan-staples.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stpls-vegan-staples.vercel.app/">
-  <meta property="og:title" content="STPLS. — Mike's actual vegan staples">
-  <meta property="og:description" content="Die veganen Basics, die ich selbst nehme, nachkaufe oder wirklich spannend finde — ohne bezahlte Rankings.">
+  <meta property="og:title" content="Michael Ninh — Work, Ideas & Vegan Staples">
+  <meta property="og:description" content="AI Engineer, Builder und Foodie in Berlin. Projekte, Ideen, ehrliche Produkttests, Kultur und eine Vision für eine menschlichere Zukunft.">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="STPLS. — Mike's actual vegan staples">
-  <meta name="twitter:description" content="My actual vegan staples. Persönlich ausgewählt, transparent erklärt.">
+  <meta name="twitter:title" content="Michael Ninh — Work, Ideas & Vegan Staples">
+  <meta name="twitter:description" content="What I build, think about, use, read and care about.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2315231b'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%23dfff44'/%3E%3C/svg%3E">
-  <title>STPLS. — Mike's Vegan Staples</title>
+  <title>Michael Ninh — Work, Ideas & Vegan Staples</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
 
     :root {
-      --ink: #15231b;
-      --paper: #eff2e8;
-      --white: #fbfcf7;
-      --acid: #dfff44;
-      --purple: #7357ff;
-      --orange: #ff7047;
-      --sky: #8dd8ff;
-      --line: rgba(21, 35, 27, .16);
-      --muted: #667168;
+      --ink: #1b211c;
+      --paper: #f2f0e9;
+      --white: #fbfaf6;
+      --acid: #d8dfbd;
+      --purple: #4e5b50;
+      --orange: #8b6f58;
+      --sky: #dbe1dc;
+      --line: rgba(27, 33, 28, .16);
+      --muted: #687068;
       --radius: 26px;
       --shadow: 0 24px 70px rgba(21, 35, 27, .12);
     }
@@ -155,6 +155,29 @@
     h2 { margin: 0; font-size: clamp(46px, 6.7vw, 83px); line-height: .95; letter-spacing: -.065em; }
     .section-copy { justify-self: end; max-width: 510px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
 
+    .personal-intro { padding-top: 42px; }
+    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .work-card { min-height: 265px; display: flex; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: var(--white); }
+    .work-card .work-type { color: var(--orange); font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
+    .work-card h3 { margin: auto 0 9px; font-size: 29px; letter-spacing: -.05em; }
+    .work-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .work-card a { display: inline-flex; align-items: center; gap: 7px; margin-top: 17px; font-size: 11px; font-weight: 700; }
+    .idea-strip { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 25px; overflow: hidden; background: var(--white); }
+    .idea { min-height: 255px; padding: 27px; border-right: 1px solid var(--line); }
+    .idea:last-child { border-right: 0; }
+    .idea span { color: var(--orange); font: 500 9px "DM Mono", monospace; }
+    .idea h3 { margin: 74px 0 10px; font-size: 25px; letter-spacing: -.04em; }
+    .idea p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .vision-panel { display: grid; grid-template-columns: 1fr .8fr; gap: 50px; align-items: center; padding: 52px; border-radius: 30px; color: white; background: var(--ink); }
+    .vision-panel blockquote { margin: 0; color: var(--acid); font-size: clamp(34px, 5vw, 65px); font-weight: 800; line-height: .98; letter-spacing: -.065em; }
+    .vision-copy p { color: #cdd3cd; font-size: 14px; line-height: 1.8; }
+    .vision-copy .mono { color: var(--acid); font-size: 9px; text-transform: uppercase; }
+    .culture-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; }
+    .culture-card { min-height: 230px; display: flex; flex-direction: column; padding: 22px; border: 1px solid var(--line); border-radius: 19px; background: var(--white); }
+    .culture-card small { color: var(--orange); font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .culture-card h3 { margin: auto 0 7px; font-size: 22px; letter-spacing: -.04em; }
+    .culture-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+
     .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
     .filter {
       padding: 10px 14px;
@@ -170,13 +193,22 @@
     .product-card { min-height: 475px; display: grid; grid-template-columns: 1fr 1.08fr; scroll-margin-top: 95px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); overflow: hidden; transition: transform .25s, box-shadow .25s, opacity .2s; }
     .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
     .product-card.hidden { display: none; }
-    .product-art { min-height: 100%; display: grid; place-items: center; position: relative; overflow: hidden; background: var(--card-color); border-right: 1px solid var(--line); }
+    .product-art { min-height: 100%; display: grid; place-items: center; position: relative; overflow: hidden; background: #e7e4dc; border-right: 1px solid var(--line); }
     .product-art::before { content: attr(data-code); position: absolute; font-size: 96px; font-weight: 800; letter-spacing: -.1em; opacity: .12; transform: rotate(-90deg); }
     .mini-pack { width: 122px; height: 180px; display: flex; flex-direction: column; justify-content: space-between; padding: 16px; color: var(--pack-ink, var(--ink)); background: var(--pack-color, var(--white)); border: 2px solid var(--ink); border-radius: 17px 17px 27px 27px; box-shadow: 9px 9px 0 var(--ink); transform: rotate(-4deg); position: relative; z-index: 1; }
     .mini-pack.round { height: 145px; border-radius: 50% 50% 20px 20px; transform: rotate(5deg); }
     .mini-pack.bottle { width: 102px; height: 190px; border-radius: 42px 42px 28px 28px; }
     .mini-pack small { font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
     .mini-pack b { font-size: 36px; line-height: .9; letter-spacing: -.08em; }
+    .product-card .mini-pack { color: var(--ink) !important; background: var(--white) !important; }
+    #pick-b12 { order: 1; }
+    #pick-creatine { order: 2; }
+    #pick-protein { order: 3; }
+    #pick-mushrooms { order: 4; }
+    #pick-vitamind { order: 5; }
+    #pick-oliveoil { order: 6; }
+    #pick-omega3 { order: 7; }
+    #pick-magnesium { order: 8; }
     .product-info { padding: 29px; display: flex; flex-direction: column; }
     .product-meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
     .rating { color: var(--ink); }
@@ -223,9 +255,41 @@
     .not-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 
     .newsletter { padding-top: 30px; }
-    .newsletter-box { min-height: 410px; display: grid; grid-template-columns: 1fr .85fr; gap: 55px; align-items: center; padding: 55px; border: 2px solid var(--ink); border-radius: 35px; background: var(--purple); color: white; box-shadow: 15px 15px 0 var(--ink); }
+    .newsletter-box { min-height: 410px; display: grid; grid-template-columns: 1fr .85fr; gap: 55px; align-items: center; padding: 55px; border: 2px solid var(--ink); border-radius: 35px; background: var(--ink); color: white; box-shadow: 15px 15px 0 #b9c29f; }
     .newsletter h2 { color: white; }
-    .newsletter p { max-width: 570px; color: #e6e1ff; line-height: 1.65; }
+    .newsletter p { max-width: 570px; color: #d6dbd6; line-height: 1.65; }
+    .partner-brief { display: grid; gap: 10px; padding: 24px; border: 1px solid rgba(255,255,255,.24); border-radius: 20px; background: rgba(255,255,255,.07); }
+    .partner-brief div { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .partner-brief div:last-child { border-bottom: 0; }
+    .partner-brief b { color: var(--acid); font: 500 10px "DM Mono", monospace; }
+    .partner-brief span { color: #eef0eb; font-size: 12px; line-height: 1.55; }
+    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 18px; }
+    .service-card { min-height: 330px; display: flex; flex-direction: column; padding: 29px; border: 1px solid var(--line); border-radius: 22px; background: var(--white); }
+    .service-card .service-label { color: var(--orange); font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
+    .service-card h3 { margin: 25px 0 10px; font-size: 29px; letter-spacing: -.05em; }
+    .service-card > p { margin: 0 0 18px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .service-card ul { margin: auto 0 0; padding: 18px 0 0 18px; border-top: 1px solid var(--line); }
+    .service-card li { color: var(--muted); font-size: 11px; line-height: 1.65; }
+    .service-card li + li { margin-top: 6px; }
+    .service-card.editorial { color: white; background: #303a32; }
+    .service-card.editorial > p, .service-card.editorial li { color: #d4dbd5; }
+    .service-card.editorial ul { border-color: rgba(255,255,255,.18); }
+    .service-card.editorial .service-label { color: var(--acid); }
+
+    .protein-section { padding-top: 36px; }
+    .protein-board { padding: 34px; border: 1px solid var(--line); border-radius: 30px; background: var(--white); }
+    .protein-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .protein-card { min-height: 190px; display: flex; flex-direction: column; padding: 21px; border: 1px solid var(--line); border-radius: 18px; background: #f4f2eb; }
+    .protein-card small { color: var(--muted); font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .protein-card h3 { margin: 24px 0 5px; font-size: 22px; letter-spacing: -.04em; }
+    .protein-number { margin-top: auto; font-size: 27px; font-weight: 800; letter-spacing: -.05em; }
+    .protein-card p { margin: 5px 0 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+    .protein-note { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .protein-note a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+    .future-shelf { margin-top: 20px; padding: 22px; border: 1px dashed var(--line); border-radius: 18px; }
+    .future-shelf strong { display: block; margin-bottom: 6px; font-size: 14px; }
+    .future-shelf p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.65; }
+    .frontier-list { grid-template-columns: repeat(3, 1fr); }
     .signup { padding: 24px; border-radius: 20px; color: var(--ink); background: var(--white); }
     .signup label { display: block; margin-bottom: 9px; font: 500 10px "DM Mono", monospace; text-transform: uppercase; }
     .input-row { display: flex; gap: 8px; }
@@ -300,6 +364,12 @@
       .section-head { grid-template-columns: 1fr; gap: 22px; }
       .section-copy { justify-self: start; }
       .product-grid { grid-template-columns: 1fr; }
+      .idea-strip, .vision-panel { grid-template-columns: 1fr; }
+      .idea { border-right: 0; border-bottom: 1px solid var(--line); }
+      .idea:last-child { border-bottom: 0; }
+      .idea h3 { margin-top: 35px; }
+      .culture-grid { grid-template-columns: repeat(2, 1fr); }
+      .protein-grid { grid-template-columns: repeat(2, 1fr); }
       .guide-heading { grid-template-columns: 1fr; }
       .guide-grid { grid-template-columns: 1fr; }
       .guide-block.wide { grid-column: auto; }
@@ -329,6 +399,13 @@
       .product-art { min-height: 270px; border-right: 0; border-bottom: 1px solid var(--line); }
       .input-row { flex-direction: column; }
       .input-row .btn { width: 100%; }
+      .protein-board { padding: 20px; }
+      .protein-grid { grid-template-columns: 1fr; }
+      .protein-card { min-height: 165px; }
+      .work-grid, .culture-grid { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
+      .work-card { min-height: 225px; }
+      .vision-panel { padding: 32px 24px; }
       .guide-modal { padding: 12px; }
       .guide-dialog { border-radius: 21px; box-shadow: 7px 7px 0 var(--acid); }
       .guide-body { padding: 24px 18px 28px; }
@@ -347,12 +424,13 @@
 
   <nav aria-label="Hauptnavigation">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top" aria-label="STPLS Startseite"><span class="brand-dot"></span>STPLS.</a>
+      <a class="brand" href="#top" aria-label="Michael Ninh Startseite"><span class="brand-dot"></span>MICHAEL NINH.</a>
       <div class="nav-links">
-        <a href="#stack">Mein Stack</a>
-        <a href="#standard">Der Standard</a>
-        <a href="b12.html">TWELVE B12</a>
-        <a class="nav-pill" href="#start-here">Start here</a>
+        <a href="#work">Work</a>
+        <a href="#ideas">Ideas</a>
+        <a href="#stack">Staples</a>
+        <a href="#culture">Culture</a>
+        <a class="nav-pill" href="#partners">Für Hersteller</a>
       </div>
     </div>
   </nav>
@@ -361,54 +439,84 @@
     <header class="hero">
       <div class="wrap hero-grid">
         <div>
-          <div class="kicker">Mike Ninh · Berlin · Personal Stack</div>
-          <h1>My actual <em>vegan staples.</em></h1>
-          <p class="lead">Die veganen Basics, die ich selbst nehme, nachkaufe oder wirklich spannend finde — plus der Standard, auf den ich bei jedem Produkt achte.</p>
+          <div class="kicker">Michael Ninh · AI Engineer · Builder · Foodie</div>
+          <h1>Building a <em>more human future.</em></h1>
+          <p class="lead">Mein lebendiger Index: was ich baue, worüber ich nachdenke, was ich esse, teste, lese und liebe — und welche Zukunft ich mitgestalten möchte.</p>
           <div class="hero-actions">
-            <a class="btn btn-acid" href="#start-here">Start here <span class="arrow">↘</span></a>
-            <a class="btn btn-ghost" href="#standard">Wie ich auswähle</a>
+            <a class="btn btn-acid" href="#work">Explore my work <span class="arrow">↘</span></a>
+            <a class="btn btn-ghost" href="#stack">My staples</a>
           </div>
-          <div class="creator"><div class="creator-avatar" aria-hidden="true">MN</div><div class="creator-copy"><strong>Hey, ich bin Mike.</strong><span>Vegan · longevity-curious · allergisch gegen leere Health-Hypes.</span></div></div>
+          <div class="creator"><div class="creator-avatar" aria-hidden="true">MN</div><div class="creator-copy"><strong>Hey, ich bin Michael.</strong><span>Vegan · longevity-curious · interessiert an guten Produkten, nicht an leeren Health-Hypes.</span></div></div>
           <div class="quick-picks" id="start-here" aria-label="Schnelleinstieg">
-            <a class="quick-pick" href="#pick-b12" style="--quick-color:#d9d0ff"><b>01</b><span><strong>Die vegane Basis</strong><small>B12</small></span></a>
-            <a class="quick-pick" href="#pick-omega3" style="--quick-color:#bfe6fa"><b>02</b><span><strong>Mein Daily</strong><small>Omega-3</small></span></a>
-            <a class="quick-pick" href="#pick-creatine" style="--quick-color:#e7ff80"><b>03</b><span><strong>Für Performance</strong><small>Kreatin</small></span></a>
+            <a class="quick-pick" href="#work" style="--quick-color:#e2ddd3"><b>01</b><span><strong>What I build</strong><small>AI + products</small></span></a>
+            <a class="quick-pick" href="#ideas" style="--quick-color:#dbe1dc"><b>02</b><span><strong>What I think</strong><small>AI + future</small></span></a>
+            <a class="quick-pick" href="#stack" style="--quick-color:#e2ddd3"><b>03</b><span><strong>What I use</strong><small>Vegan staples</small></span></a>
           </div>
           <div class="tiny">Persönliche Auswahl · evidenzorientiert · keine bezahlten Rankings</div>
         </div>
-        <div class="stack-stage" aria-label="Illustration ausgewählter veganer Basics">
+        <div class="stack-stage" aria-label="Illustration von Michaels Arbeit, Empfehlungen und Ideen">
           <div class="stage-orbit"></div>
-          <div class="stamp">Used daily<br>by Mike</div>
-          <div class="pack pack-b12"><small>Vegan essential</small><b>B12</b><strong>Die Basis.</strong></div>
-          <div class="pack pack-o3"><small>Algae only</small><b>Ω3</b><strong>EPA + DHA</strong></div>
-          <div class="pack pack-cr"><small>Daily 3–5 g</small><b>Cr</b><strong>Creatine</strong></div>
+          <div class="stamp">A living index<br>by Michael</div>
+          <div class="pack pack-b12"><small>Useful systems</small><b>AI</b><strong>What I build.</strong></div>
+          <div class="pack pack-o3"><small>Honest curation</small><b>STP<br>LS</b><strong>What I use.</strong></div>
+          <div class="pack pack-cr"><small>Ideas + values</small><b>∞</b><strong>The future</strong></div>
         </div>
       </div>
     </header>
 
     <div class="ticker" aria-hidden="true">
       <div class="ticker-track">
-        <span>B12</span><i></i><span>Algen-Omega-3</span><i></i><span>Vitamin D3</span><i></i><span>Kreatin</span><i></i><span>Magnesium</span><i></i><span>Polyphenol-Olivenöl</span><i></i><span>Funktionale Pilze</span><i></i><span>Jod</span><i></i>
-        <span>B12</span><i></i><span>Algen-Omega-3</span><i></i><span>Vitamin D3</span><i></i><span>Kreatin</span><i></i><span>Magnesium</span><i></i><span>Polyphenol-Olivenöl</span><i></i><span>Funktionale Pilze</span><i></i><span>Jod</span><i></i>
+        <span>AI systems</span><i></i><span>Human flourishing</span><i></i><span>Vegan food</span><i></i><span>Honest reviews</span><i></i><span>Open source</span><i></i><span>Conscious technology</span><i></i><span>Books + film</span><i></i><span>Love at scale</span><i></i>
+        <span>AI systems</span><i></i><span>Human flourishing</span><i></i><span>Vegan food</span><i></i><span>Honest reviews</span><i></i><span>Open source</span><i></i><span>Conscious technology</span><i></i><span>Books + film</span><i></i><span>Love at scale</span><i></i>
       </div>
     </div>
+
+    <section class="personal-intro" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="section-no">01 / WHAT I BUILD</span><h2>Useful things.<br>Real people.</h2></div>
+          <p class="section-copy">Ich bin AI Engineer und Produktmensch. Mich interessieren keine Demos um der Demo willen, sondern offene, verständliche Systeme, die Menschen wirklich helfen.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card"><span class="work-type">Legal AI · Open source</span><h3>GitLaw</h3><p>Gesetze, Änderungen und öffentliche Entscheidungen nachvollziehbarer machen — mit transparenter Versionslogik statt Black Box.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
+          <article class="work-card"><span class="work-type">Safety · Human-centered AI</span><h3>SafeVoice</h3><p>Strukturierte, sichere Wege, um sensible Erfahrungen festzuhalten und nächste Schritte verständlicher zu machen.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
+          <article class="work-card"><span class="work-type">MCP · Reusable infrastructure</span><h3>Recht-MCP</h3><p>Wiederverwendbare Werkzeuge, damit andere Agenten und Anwendungen verlässlicher mit Recht und öffentlichen Informationen arbeiten können.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
+          <article class="work-card"><span class="work-type">AI operations · Closed loops</span><h3>INCA Loop</h3><p>Von unstrukturiertem Input zu überprüfbaren Ergebnissen: mehrstufige AI-Workflows mit klaren Outputs, Feedback und Verbesserungsschleifen.</p><a href="https://github.com/mikelninh" target="_blank" rel="noopener">Project trail ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ideas">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="section-no">02 / IDEAS & THE FUTURE</span><h2>Questions worth<br>building around.</h2></div>
+          <p class="section-copy">Notizen und Experimente über AI, Bewusstsein, öffentliche Infrastruktur und eine Zukunft, in der Technologie mehr Freiheit und weniger Leid schafft.</p>
+        </div>
+        <div class="idea-strip">
+          <article class="idea"><span>01</span><h3>AI should increase agency.</h3><p>Gute AI nimmt Menschen nicht die Entscheidung ab. Sie macht Zusammenhänge sichtbar, Optionen verständlich und Handeln leichter.</p></article>
+          <article class="idea"><span>02</span><h3>Open tools compound.</h3><p>Ein gutes Projekt löst nicht nur ein Problem. Es hinterlässt Bausteine, die andere Bürger:innen, Teams und Agenten wiederverwenden können.</p></article>
+          <article class="idea"><span>03</span><h3>Intelligence needs values.</h3><p>Die spannendste Zukunft ist nicht nur intelligenter. Sie ist mitfühlender, gerechter und bewusster darin, wem Fortschritt wirklich dient.</p></article>
+        </div>
+      </div>
+    </section>
 
     <section id="stack">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">01 / THE STACK</span><h2>Die guten<br>Dauergäste.</h2></div>
-          <p class="section-copy">Meine Shortlist für den Alltag. Nicht alles ist für jede Person nötig. Öffne bei jedem Pick „Dosis & Evidenz“ für meine Einordnung, Einnahme, Grenzen und Originalquellen.</p>
+          <div><span class="section-no">03 / MY STAPLES</span><h2>What I actually<br>use & eat.</h2></div>
+          <p class="section-copy">Persönlicher Status statt so zu tun, als wäre alles ein Daily: Core, Berlin-Winter, Secondary oder Curious. Dazu Dosis, Evidenz und die entscheidende Frage: Würde ich es selbst wieder kaufen?</p>
         </div>
 
         <div class="filter-row" role="group" aria-label="Produkte filtern">
           <button class="filter active" data-filter="all">Alle 8</button>
-          <button class="filter" data-filter="essential">Vegan essentials</button>
-          <button class="filter" data-filter="performance">Performance</button>
-          <button class="filter" data-filter="food">Food & ritual</button>
+          <button class="filter" data-filter="core">My core</button>
+          <button class="filter" data-filter="seasonal">Berlin winter</button>
+          <button class="filter" data-filter="curious">Curious</button>
+          <button class="filter" data-filter="secondary">Secondary</button>
         </div>
 
         <div class="product-grid">
-          <article class="product-card" id="pick-b12" data-category="essential" style="--card-color:#d9d0ff">
+          <article class="product-card" id="pick-b12" data-category="core" style="--card-color:#d9d0ff">
             <div class="product-art" data-code="B12"><div class="mini-pack" style="--pack-color:#7357ff;--pack-ink:#fff"><small>Vegan essential</small><b>B12</b><small>simple wins</small></div></div>
             <div class="product-info">
               <div class="product-meta"><span>01 · täglich / wöchentlich</span><span class="rating">● Base</span></div>
@@ -420,31 +528,31 @@
             </div>
           </article>
 
-          <article class="product-card" id="pick-omega3" data-category="essential" style="--card-color:#bfe6fa">
+          <article class="product-card" id="pick-omega3" data-category="secondary" style="--card-color:#bfe6fa">
             <div class="product-art" data-code="Ω3"><div class="mini-pack bottle" style="--pack-color:#8dd8ff"><small>From algae</small><b>EPA<br>+DHA</b><small>ocean-free</small></div></div>
             <div class="product-info">
-              <div class="product-meta"><span>02 · mit einer Mahlzeit</span><span class="rating">● Daily</span></div>
+              <div class="product-meta"><span>07 · aktuell nicht</span><span class="rating">○ Not taking</span></div>
               <h3>Algen-Omega-3</h3>
-              <p>Direkt aus der Alge statt über den Umweg Fisch. Gehört für mich zu den sinnvollsten veganen Staples.</p>
+              <p>Nehme ich zurzeit nicht. Algenöl bleibt wissenschaftlich interessant, aber ich möchte es erst wieder als „Pick“ führen, wenn ein Produkt mich bei Qualität, Frische und Preis überzeugt.</p>
               <div class="spec"><b>Mein Kaufstandard</b>EPA + DHA klar ausgewiesen · Oxidationsschutz · chargengeprüft · Algenquelle genannt</div>
               <button class="guide-button" type="button" data-guide="omega3">Dosis & Evidenz <span>↗</span></button>
               <a class="btn affiliate" data-product="omega3" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
 
-          <article class="product-card" data-category="essential" style="--card-color:#ffcf63">
+          <article class="product-card" id="pick-vitamind" data-category="seasonal" style="--card-color:#ffcf63">
             <div class="product-art" data-code="D3"><div class="mini-pack round" style="--pack-color:#fff4b7"><small>Vegan source</small><b>D3</b><small>lichen based</small></div></div>
             <div class="product-info">
-              <div class="product-meta"><span>03 · saisonal</span><span class="rating">◐ Context</span></div>
+              <div class="product-meta"><span>05 · Berlin winter</span><span class="rating">◐ Seasonal</span></div>
               <h3>Vitamin D3</h3>
-              <p>Vor allem im lichtarmen Winter relevant. Dosis und Bedarf sind individueller als Social Media oft suggeriert.</p>
+              <p>Mein saisonaler Staple für den lichtarmen Berliner Winter — nicht automatisch mein Ganzjahres-Daily.</p>
               <div class="spec"><b>Mein Kaufstandard</b>veganes D3 aus Flechten · seriöse Dosis · ölbasierte Form · idealerweise nach Blutwert</div>
               <button class="guide-button" type="button" data-guide="vitamind">Dosis & Evidenz <span>↗</span></button>
               <a class="btn affiliate" data-product="vitamind" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
 
-          <article class="product-card" id="pick-creatine" data-category="performance" style="--card-color:#e7ff80">
+          <article class="product-card" id="pick-creatine" data-category="core" style="--card-color:#e7ff80">
             <div class="product-art" data-code="Cr"><div class="mini-pack round" style="--pack-color:#dfff44"><small>3–5 g daily</small><b>CREA<br>TINE</b><small>monohydrate</small></div></div>
             <div class="product-info">
               <div class="product-meta"><span>04 · täglich</span><span class="rating">● Daily</span></div>
@@ -456,19 +564,19 @@
             </div>
           </article>
 
-          <article class="product-card" data-category="performance" style="--card-color:#ffc9b8">
+          <article class="product-card" id="pick-magnesium" data-category="secondary" style="--card-color:#ffc9b8">
             <div class="product-art" data-code="Mg"><div class="mini-pack" style="--pack-color:#ff7047;--pack-ink:#fff"><small>Evening option</small><b>Mg</b><small>no oxide hype</small></div></div>
             <div class="product-info">
-              <div class="product-meta"><span>05 · nach Bedarf</span><span class="rating">◐ Context</span></div>
+              <div class="product-meta"><span>08 · sekundär</span><span class="rating">○ Secondary</span></div>
               <h3>Magnesium</h3>
-              <p>Kein Wundermittel, aber praktisch, wenn Ernährung, Sport oder Alltag die Versorgung nicht zuverlässig abdecken.</p>
+              <p>Für mich kein Kern-Staple. Eher eine gezielte Option, wenn Ernährung, Sport oder Alltag die Versorgung nicht zuverlässig abdecken.</p>
               <div class="spec"><b>Mein Kaufstandard</b>Elementarmenge angegeben · gut verträgliche Verbindung · keine unnötigen Mega-Dosen</div>
               <button class="guide-button" type="button" data-guide="magnesium">Dosis & Evidenz <span>↗</span></button>
               <a class="btn affiliate" data-product="magnesium" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
 
-          <article class="product-card" data-category="food" style="--card-color:#cad890">
+          <article class="product-card" id="pick-oliveoil" data-category="core" style="--card-color:#cad890">
             <div class="product-art" data-code="EVOO"><div class="mini-pack bottle" style="--pack-color:#294d34;--pack-ink:#fff"><small>Early harvest</small><b>OLIVE<br>OIL</b><small>high phenolic</small></div></div>
             <div class="product-info">
               <div class="product-meta"><span>06 · Food first</span><span class="rating">● Ritual</span></div>
@@ -480,69 +588,142 @@
             </div>
           </article>
 
-          <article class="product-card" data-category="food" style="--card-color:#dbc5a8">
-            <div class="product-art" data-code="FUNGI"><div class="mini-pack" style="--pack-color:#4e342b;--pack-ink:#fff"><small>Fruiting body</small><b>FUN<br>GI</b><small>extract only</small></div></div>
+          <article class="product-card" id="pick-mushrooms" data-category="core curious" style="--card-color:#dbc5a8">
+            <div class="product-art" data-code="LION"><div class="mini-pack" style="--pack-color:#4e342b;--pack-ink:#fff"><small>My mushroom pick</small><b>LION’S<br>MANE</b><small>fruiting body</small></div></div>
             <div class="product-info">
-              <div class="product-meta"><span>07 · curious pick</span><span class="rating">○ Explore</span></div>
-              <h3>Funktionale Pilze</h3>
-              <p>Lion’s Mane, Reishi & Co. finde ich spannend — aber hier ist mehr Marketing als bei B12. Deshalb besonders streng auswählen.</p>
+              <div class="product-meta"><span>04 · personal favorite</span><span class="rating">● Love it</span></div>
+              <h3>Lion’s Mane</h3>
+              <p>Ich feiere Lion’s Mane. Gerade deshalb trenne ich persönliche Begeisterung sauber von der noch frühen und gemischten Evidenz.</p>
               <div class="spec"><b>Mein Kaufstandard</b>Fruchtkörper · Extraktionsverhältnis · Beta-Glucane analysiert · keine Proprietary Blend</div>
               <button class="guide-button" type="button" data-guide="mushrooms">Evidenz ehrlich prüfen <span>↗</span></button>
               <a class="btn affiliate" data-product="mushrooms" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
             </div>
           </article>
 
-          <article class="product-card" data-category="essential" style="--card-color:#f2b9d7">
-            <div class="product-art" data-code="I"><div class="mini-pack bottle" style="--pack-color:#f7e4ef"><small>micro mineral</small><b>IOD<br>INE</b><small>mind the dose</small></div></div>
+          <article class="product-card" id="pick-protein" data-category="core" style="--card-color:#e2ddd3">
+            <div class="product-art" data-code="PRO"><div class="mini-pack" style="--pack-color:#f7e4ef"><small>Food first</small><b>SOY<br>+</b><small>complete protein</small></div></div>
             <div class="product-info">
-              <div class="product-meta"><span>08 · Versorgung prüfen</span><span class="rating">◐ Context</span></div>
-              <h3>Jod</h3>
-              <p>Ein echter veganer Blindspot — besonders ohne jodiertes Salz oder verlässliche Algenmenge. Hier zählt Präzision statt „viel hilft viel“.</p>
-              <div class="spec"><b>Mein Kaufstandard</b>niedrig und klar dosierbar · keine schwankenden Kelp-Mengen · Schilddrüse berücksichtigen</div>
-              <button class="guide-button" type="button" data-guide="iodine">Dosis & Evidenz <span>↗</span></button>
-              <a class="btn affiliate" data-product="iodine" href="#">Mein Pick<span class="affiliate-mark">*</span> <span class="arrow">→</span></a>
+              <div class="product-meta"><span>03 · täglich als Food</span><span class="rating">● Core</span></div>
+              <h3>Soja + Protein Foods</h3>
+              <p>Sojamilch vor allem — dazu Tofu, Tempeh, Seitan, Edamame und Sojagranulat. Keine Pulverpflicht, sondern echte Lebensmittel mit starken Proteinwerten.</p>
+              <div class="spec"><b>Mein Kaufstandard</b>Protein pro Portion · kurze Zutatenliste · Geschmack · Preis pro Protein · würde ich es nachkaufen?</div>
+              <a class="guide-button" href="#protein">Proteinwerte vergleichen <span>↘</span></a>
+              <a class="btn" href="#future-shelf">Supermarkt-Picks folgen <span class="arrow">→</span></a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="manifesto" id="standard">
-      <div class="wrap manifesto-grid">
-        <div><span class="section-no">02 / THE STANDARD</span><h2>Good picks.<br>No BS.</h2></div>
-        <div class="rules">
-          <div class="rule"><span>01</span><div><h3>Ich muss es selbst vertreten können.</h3><p>Kein Produkt bekommt einen Platz, nur weil die Provision hoch ist. Die Reihenfolge ist redaktionell und nicht gekauft.</p></div></div>
-          <div class="rule"><span>02</span><div><h3>Das Etikett muss Antworten geben.</h3><p>Wirkstoffmenge, Quelle, Form und relevante Analysen gehören sichtbar gemacht. „Premium Blend“ ist keine Information.</p></div></div>
-          <div class="rule"><span>03</span><div><h3>Preis pro sinnvoller Dosis.</h3><p>Ich vergleiche nicht die billigste Dose, sondern was eine nachvollziehbare Tages- oder Wochendosis wirklich kostet.</p></div></div>
-          <div class="rule" id="transparenz"><span>04</span><div><h3>Affiliate, aber glasklar.</h3><p>Bei mit * markierten Links kann ich eine Provision erhalten. Dein Preis bleibt gleich. Partnerschaften verändern weder Auswahl noch Urteil.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
+    <section class="protein-section" id="protein">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">03 / THE BOUNDARY</span><h2>Passt nicht<br>in jeden Stack.</h2></div>
-          <p class="section-copy">Eine glaubwürdige Empfehlungsseite braucht Grenzen. Interessant heißt nicht automatisch: täglich, für alle oder überhaupt als Affiliate-Produkt.</p>
+          <div><span class="section-no">04 / PROTEIN, ACTUALLY FOOD</span><h2>Strong basics.<br>No powder required.</h2></div>
+          <p class="section-copy">Typische Proteinwerte als schnelle Orientierung. Produkte unterscheiden sich — bei meinen späteren Supermarkt-Picks zählt deshalb immer das konkrete Etikett.</p>
         </div>
-        <div class="not-list">
-          <article class="not-card"><div class="symbol">☾</div><h3>Melatonin</h3><p>Eher situatives Tool für bestimmte Schlaf- oder Jetlag-Kontexte als tägliches „Wellness-Gummy“. Dosierung und Regulierung verdienen mehr Sorgfalt.</p></article>
-          <article class="not-card"><div class="symbol">◇</div><h3>Psychedelika</h3><p>Kein Affiliate-Thema für diese Seite. Legalität, Gesundheit und verantwortungsvoller Kontext sind zu wichtig für einen schnellen Produktlink.</p></article>
-          <article class="not-card"><div class="symbol">×</div><h3>Hype-Blends</h3><p>Greens, Detox und zehn Wirkstoffe in Staubmengen kommen nur rein, wenn Dosis, Nutzen und Preis einer ehrlichen Prüfung standhalten.</p></article>
+        <div class="protein-board">
+          <div class="protein-grid">
+            <article class="protein-card"><small>Mein Alltagsfavorit</small><h3>Sojamilch</h3><div class="protein-number">3,0–3,6 g</div><p>pro 100 ml · ein 300-ml-Glas liefert typischerweise 9–11 g Protein.</p></article>
+            <article class="protein-card"><small>Versatile staple</small><h3>Tofu</h3><div class="protein-number">12–18 g</div><p>pro 100 g · 200 g liefern je nach Produkt ungefähr 24–36 g.</p></article>
+            <article class="protein-card"><small>Fermented soy</small><h3>Tempeh</h3><div class="protein-number">18–21 g</div><p>pro 100 g · kräftiger, fester und für mich einer der spannendsten Protein-Staples.</p></article>
+            <article class="protein-card"><small>Wheat protein</small><h3>Seitan</h3><div class="protein-number">24–30 g</div><p>pro 100 g · sehr proteinreich, aber kein vollständiger Ersatz für abwechslungsreiche Quellen.</p></article>
+            <article class="protein-card"><small>Whole soy bean</small><h3>Edamame</h3><div class="protein-number">11–13 g</div><p>pro 100 g · Snack, Bowl-Topping und vollwertige Sojaquelle.</p></article>
+            <article class="protein-card"><small>Dry weight</small><h3>Sojagranulat / TVP</h3><div class="protein-number">45–55 g</div><p>pro 100 g trocken · extrem effizient; nach dem Einweichen ist der Wert pro 100 g niedriger.</p></article>
+          </div>
+          <div class="protein-note"><span>Werte sind realistische Produktbereiche, keine exakten Angaben für jede Marke. Portions- und Trockenangaben nicht vermischen.</span><span>Quellen: <a href="https://www.blsdb.de/" target="_blank" rel="noopener">Bundeslebensmittelschlüssel ↗</a> · <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central ↗</a></span></div>
+          <div class="future-shelf" id="future-shelf"><strong>Next: Michael’s supermarket shelf</strong><p>Meine konkreten Lieblingsprodukte aus REWE, EDEKA, Bio Company, dm & Co. — mit Marke, Geschmack, Zutaten, Protein pro Portion, Preis, Protein pro Euro, „würde ich nachkaufen?“ und Kauf-/Affiliate-Link, wenn ich wirklich dahinterstehe.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="newsletter" id="updates">
+    <section class="manifesto" id="standard">
+      <div class="wrap manifesto-grid">
+        <div><span class="section-no">05 / THE TABLE TEST</span><h2>Would I buy<br>it again?</h2></div>
+        <div class="rules">
+          <div class="rule"><span>01</span><div><h3>Wir probieren es wirklich.</h3><p>Ich teste selbst — bei Food gern gemeinsam mit meinem Partner oder meiner Partnerin und Freund:innen. Mehrere ehrliche Geschmäcker sind wertvoller als ein perfektes Werbe-Zitat.</p></div></div>
+          <div class="rule"><span>02</span><div><h3>Ein nachvollziehbarer Score.</h3><p>Geschmack · Zutaten · Nährwerte bzw. Evidenz · Preis-Leistung · Alltagstauglichkeit. Gesponserte Samples werden immer sichtbar offengelegt.</p></div></div>
+          <div class="rule"><span>03</span><div><h3>Die entscheidende Frage.</h3><p><strong>Würde ich das mit meinem eigenen Geld noch einmal kaufen?</strong> Das finale Verdict ist YES, MAYBE oder NO. Ein schönes Packaging allein rettet kein Produkt.</p></div></div>
+          <div class="rule" id="transparenz"><span>04</span><div><h3>Affiliate-Link nur bei YES.</h3><p>Kein bezahltes Ranking, keine Ergebnisfreigabe durch Hersteller. Bei mit * markierten Links kann ich eine Provision erhalten; der Preis bleibt gleich. Die Kooperation verändert das Urteil nicht.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="frontier">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="section-no">06 / CONSCIOUS FRONTIER</span><h2>Fascinated.<br>Not careless.</h2></div>
+          <p class="section-copy">LSD und Psilocybin faszinieren mich persönlich und wissenschaftlich. Gerade deshalb trenne ich Forschung, Legalität und kommerzielles Interesse sauber voneinander.</p>
+        </div>
+        <div class="not-list frontier-list">
+          <article class="not-card"><div class="symbol">◇</div><h3>LSD & Analoga</h3><p>Ein echtes Interessengebiet — aber kein statisches „legal“-Label. Das NpSG wurde zuletzt zum 2. Dezember 2025 erweitert; einzelne Analoga brauchen immer eine aktuelle juristische Prüfung.</p></article>
+          <article class="not-card"><div class="symbol">◎</div><h3>Psilocybin</h3><p>Die Forschung ist spannend. In Deutschland stehen Psilocybin und Psilocin jedoch in Anlage I des BtMG. Deshalb aktuell keine Consumer-Produktlinks oder Affiliate-Empfehlungen.</p></article>
+          <article class="not-card"><div class="symbol">✓</div><h3>Legal-first</h3><p>Offen für seriöse Forschung, Bildung und nachweislich legale Modelle. Keine Grey-Zone-Verkaufsseite. Status geprüft am 17. Juli 2026: <a href="https://www.gesetze-im-internet.de/btmg_1981/anlage_i.html" target="_blank" rel="noopener"><u>BtMG</u></a> · <a href="https://www.bundesgesundheitsministerium.de/service/gesetze-und-verordnungen/detail/verordnung-zur-aenderung-der-anlage-des-neue-psychoaktive-stoffe-gesetzes-und-von-anlagen-des-btmg" target="_blank" rel="noopener"><u>NpSG</u></a>.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="culture">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="section-no">07 / CULTURE SHELF</span><h2>Things I keep<br>returning to.</h2></div>
+          <p class="section-copy">Keine algorithmische Top-10-Liste. Bücher, Filme, Lehrer:innen und Dokumentationen, die etwas in mir bewegt oder meine Sicht auf die Welt erweitert haben.</p>
+        </div>
+        <div class="culture-grid">
+          <article class="culture-card"><small>Film</small><h3>Past Lives</h3><p>Über Identität, Timing, Liebe und die Leben, die wir nicht gelebt haben.</p></article>
+          <article class="culture-card"><small>Book</small><h3>A New Earth</h3><p>Eckhart Tolle über Ego, Gegenwärtigkeit und einen bewussteren Umgang mit dem eigenen Denken.</p></article>
+          <article class="culture-card"><small>Timeless text</small><h3>Bhagavad Gita</h3><p>Dharma, Handeln ohne Anhaftung und die Frage, wie wir mitten im Leben klar bleiben.</p></article>
+          <article class="culture-card"><small>Teacher & writing</small><h3>Thich Nhat Hanh</h3><p>Mitgefühl und Achtsamkeit nicht als Flucht, sondern als gelebte Praxis.</p></article>
+        </div>
+        <div class="future-shelf"><strong>Next shelf: documentaries + more films</strong><p>Notizen zu Bewusstsein, AI, Zukunft, Food Systems, Design und menschlichen Beziehungen — ergänzt, sobald ich wirklich etwas dazu zu sagen habe.</p></div>
+      </div>
+    </section>
+
+    <section id="vision">
+      <div class="wrap">
+        <div class="vision-panel">
+          <blockquote>Human flourishing. Planetary health. Conscious freedom. Love at scale.</blockquote>
+          <div class="vision-copy"><span class="mono">08 / MY NORTH STAR</span><p>Ich möchte Technologie, Produkte und Geschichten bauen, die Freiheit vergrößern, Leid reduzieren und Menschen helfen, bewusster zu leben — ohne den Planeten oder andere Lebewesen als Nebensache zu behandeln.</p><p>Education + technology + compassion.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="partners">
       <div class="wrap">
         <div class="newsletter-box">
-          <div><span class="section-no" style="color:var(--acid)">DROP NOTES · NO SPAM</span><h2>Neue Picks,<br>selten gesendet.</h2><p>Wenn ein Produkt den Stack schafft, schicke ich die kurze Begründung: was drin ist, was es kostet und warum es besser ist als der Rest.</p></div>
-          <form class="signup" id="signupForm">
-            <label for="email">Deine E-Mail</label>
-            <div class="input-row"><input id="email" type="email" autocomplete="email" placeholder="du@beispiel.de" required><button class="btn" type="submit">Dabei sein</button></div>
-            <small id="formNote">Prototype: Deine Eingabe wird aktuell nur lokal in deinem Browser gespeichert und nicht versendet.</small>
-            <p class="form-success" id="formSuccess">Gespeichert. Der echte Newsletter-Anschluss kommt als Nächstes.</p>
-          </form>
+          <div><span class="section-no" style="color:var(--acid)">09 / FOR BRANDS & PRODUCERS</span><h2>Send it to<br>the table.</h2><p>Schickt uns euer veganes Produkt. Ich teste es gemeinsam mit meinem Partner oder meiner Partnerin und Freund:innen — wenn möglich blind, mit echten ersten Reaktionen, individuellen Verdicts und verwertbarem Feedback.</p><p>Wenn du diesen Link von mir erhalten hast, antworte einfach direkt auf meine Nachricht.</p></div>
+          <div class="partner-brief">
+            <div><b>01</b><span>Produkt zuschicken + Ziel und konkrete Fragen nennen</span></div>
+            <div><b>02</b><span>Blind Tasting, wenn Verpackung und Kontext neutralisierbar sind</span></div>
+            <div><b>03</b><span>Erste Geschmacksreaktion jeder Person auf Video</span></div>
+            <div><b>04</b><span>Individuelles YES / MAYBE / NO: „Würde ich es nachkaufen?“</span></div>
+            <div><b>05</b><span>Gemeinsame Auswertung: Geschmack, Textur, Zutaten und Preis</span></div>
+          </div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-label">Paid service · Private by default</span>
+            <h3>The Blind Table Test</h3>
+            <p>Ein ehrlicher Mini-Research-Sprint mit echten Konsument:innen statt höflichem Influencer-Feedback. Bezahlt wird für Durchführung und Erkenntnisse — niemals für ein positives Ergebnis.</p>
+            <ul>
+              <li>3–6 Tester:innen aus meinem persönlichen Umfeld</li>
+              <li>Blind oder semi-blind, sofern sinnvoll möglich</li>
+              <li>First-Reaction-Video jeder Person — mit ihrem Einverständnis</li>
+              <li>Einzel-Verdicts plus „würde ich nachkaufen?“</li>
+              <li>Zusammenfassung mit Must-keep, Friction und Verbesserungsideen</li>
+            </ul>
+          </article>
+          <article class="service-card editorial">
+            <span class="service-label">Earned · Public only after a YES</span>
+            <h3>Review + Recommendation</h3>
+            <p>Wenn das Produkt mich wirklich überzeugt, kann aus dem Test eine öffentliche Empfehlung werden. Das ist eine zweite Entscheidung und nicht im Test käuflich enthalten.</p>
+            <ul>
+              <li>Ehrliches Reaction-Video oder kurzer Review</li>
+              <li>Verdict jeder teilnehmenden Person sichtbar</li>
+              <li>Sample und Bezahlung transparent gekennzeichnet</li>
+              <li>Optionaler Affiliate-Link oder Community-Rabatt</li>
+              <li>Keine Ergebnisfreigabe und kein gekauftes Ranking</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -551,8 +732,8 @@
   <footer>
     <div class="wrap">
       <div class="footer-grid">
-        <div class="footer-brand"><a class="brand" href="#top"><span class="brand-dot"></span>STPLS.</a><p>Mike’s persönliche Shortlist für vegane Basics. Klarer Standard, transparente Links und genug Meinung, um auch mal Nein zu sagen.</p></div>
-        <div class="footer-col"><strong>Explore</strong><a href="#stack">Mein Stack</a><a href="#standard">Auswahlstandard</a><a href="b12.html">TWELVE B12</a></div>
+        <div class="footer-brand"><a class="brand" href="#top"><span class="brand-dot"></span>MICHAEL NINH.</a><p>AI Engineer, Builder und Foodie. Work, ideas, vegan staples, culture und eine persönliche Vision für eine menschlichere Zukunft.</p></div>
+        <div class="footer-col"><strong>Explore</strong><a href="#work">Work</a><a href="#ideas">Ideas</a><a href="#stack">Staples</a><a href="#culture">Culture</a></div>
         <div class="footer-col"><strong>Legal</strong><a href="#transparenz">Affiliate-Hinweis</a><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
       </div>
       <div class="legal">Hinweis: Persönliche Empfehlungen, keine medizinische Beratung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung. Bei Mangel, Erkrankungen, Medikamenteneinnahme, Schwangerschaft oder Unsicherheit fachlich beraten lassen. Affiliate-Links müssen vor Veröffentlichung final gekennzeichnet sowie Impressum und Datenschutz ergänzt werden.</div>
@@ -570,14 +751,14 @@
     <div class="modal-card">
       <div class="modal-top"><h3 id="modalTitle">Pick ist reserviert.</h3><button class="close" id="closeModal" aria-label="Dialog schließen">×</button></div>
       <p>Für dieses Produkt ist noch kein echter Partnerlink hinterlegt. Sobald du deinen Affiliate-Partner gewählt hast, genügt eine URL im <span class="mono">AFFILIATE_LINKS</span>-Block — dann führt der Button direkt zum Produkt.</p>
-      <a class="btn btn-acid" href="#updates" id="modalUpdates">Update bekommen <span class="arrow">→</span></a>
+      <a class="btn btn-acid" href="#partners" id="modalUpdates">Kooperationsstandard <span class="arrow">→</span></a>
     </div>
   </div>
 
   <nav class="mobile-dock" aria-label="Mobile Schnellnavigation">
-    <a href="#stack">Alle Picks</a>
-    <a href="#pick-b12">Start mit B12</a>
-    <a href="#updates">Updates</a>
+    <a href="#work">Work</a>
+    <a href="#stack">Staples</a>
+    <a href="#partners">Partner</a>
   </nav>
 
   <script>
@@ -588,8 +769,7 @@
       creatine: "",
       magnesium: "",
       oliveoil: "",
-      mushrooms: "",
-      iodine: ""
+      mushrooms: ""
     };
 
     const GUIDES = {
@@ -624,9 +804,9 @@
       },
       creatine: {
         title: "Kreatin",
-        tag: "mike’s daily",
+        tag: "Michael’s daily",
         evidence: "Evidenz: stark für Performance",
-        intro: "Das wiederkehrende Thema war real: erst CREA by Mikel Ninh, später MYKŌ Ascend. Der Kern ist heute derselbe — reines Kreatin-Monohydrat als tägliches, unspektakulär gutes Ritual.",
+        intro: "Das wiederkehrende Thema war real: erst CREA by Michael Ninh, später MYKŌ Ascend. Der Kern ist heute derselbe — reines Kreatin-Monohydrat als tägliches, unspektakulär gutes Ritual.",
         dose: "3–5 g täglich",
         doseNote: "Jeden Tag, Uhrzeit egal. 300 g ergeben bei 5 g pro Tag 60 Portionen bzw. ungefähr zwei Monate.",
         blocks: `
@@ -646,13 +826,13 @@
       },
       omega3: {
         title: "Algen-Omega-3",
-        tag: "vegan essential",
+        tag: "currently not taking",
         evidence: "Evidenz: solide",
-        intro: "ALA aus Leinsamen und Walnüssen bleibt wertvoll. Algenöl liefert EPA und DHA direkt — ohne auf die begrenzte körpereigene Umwandlung zu wetten.",
+        intro: "Ich nehme aktuell kein Omega-3-Supplement. Der Guide bleibt als ehrliche Einordnung und als Briefing für ein Produkt, das mich bei Frische, Prüfung und Preis überzeugen müsste.",
         dose: "250 mg EPA + DHA",
-        doseNote: "Täglicher Basiswert für gesunde Erwachsene. Entscheidend ist die Summe EPA+DHA, nicht die große Zahl „Algenöl“ vorn auf der Packung.",
+        doseNote: "EFSA-Basiswert zur Orientierung — nicht meine aktuelle persönliche Routine. Entscheidend ist die Summe EPA+DHA, nicht „Algenöl“ auf der Front.",
         blocks: `
-          <div class="guide-block"><h4>Mein Default</h4><p>Mindestens <strong>250 mg EPA plus DHA pro Tag</strong> aus Mikroalgen, mit einer Mahlzeit. Wer kaum ALA-Quellen isst, schwanger ist oder medizinische Ziele verfolgt, braucht eine individuellere Einordnung.</p></div>
+          <div class="guide-block"><h4>Mein aktueller Status</h4><p><strong>Not taking.</strong> Sollte ein Produkt zurück in meinen Stack kommen, müsste es mindestens 250 mg EPA+DHA nachvollziehbar liefern und durch aktuelle Chargen- und Oxidationsdaten überzeugen.</p></div>
           <div class="guide-block"><h4>Etikett lesen</h4><p>„1.000 mg Algenöl“ sagt fast nichts. Gesucht sind die separat ausgewiesenen Milligramm <strong>EPA und DHA</strong>, eine klar benannte Algenquelle, Antioxidationsschutz und möglichst Chargen- bzw. Oxidationsprüfung.</p></div>
           <div class="guide-block"><h4>Aufnahme</h4><p>Mit einer fetthaltigen Mahlzeit ist die Einnahme praktisch und oft verträglicher. ALA wird nur begrenzt zu EPA und besonders wenig zu DHA umgewandelt; Algenöl umgeht diesen Schritt.</p></div>
           <div class="guide-block"><h4>Grenzen</h4><p>Höhere Dosen sind kein automatisches Upgrade. Bei Blutverdünnern, Blutungsstörungen, geplanter OP oder therapeutischen Gramm-Dosen fachlich abstimmen.</p></div>`,
@@ -666,9 +846,9 @@
         title: "Vitamin D3",
         tag: "seasonal",
         evidence: "Evidenz: stark bei Unterversorgung",
-        intro: "Vitamin D ist kontextabhängig: Sonne, Jahreszeit, Haut, Alter und Lebensstil verändern den Bedarf. Mehr ist nicht automatisch besser.",
+        intro: "Mein Kontext ist Berlin: wenig effektive Sonne im Winter, deutlich mehr im Sommer. Deshalb saisonaler Staple statt reflexhaftes Ganzjahres-Daily.",
         dose: "20 µg / 800 IE",
-        doseNote: "DGE-Schätzwert bei fehlender körpereigener Bildung. Nicht pauschal als Ganzjahres-Megadosis verstehen.",
+        doseNote: "DGE-Schätzwert bei fehlender körpereigener Bildung — für mich vor allem im Berliner Winter relevant, nicht als pauschale Ganzjahres-Megadosis.",
         blocks: `
           <div class="guide-block"><h4>Mein Default</h4><p>Im lichtarmen Winter ist <strong>20 µg bzw. 800 IE täglich</strong> ein vernünftiger Ausgangspunkt, wenn kaum Eigenbildung stattfindet. Wer gezielt optimieren oder einen Mangel behandeln will, entscheidet nach 25-OH-D-Blutwert und medizinischem Kontext.</p></div>
           <div class="guide-block"><h4>Vegan kaufen</h4><p>D3 aus <strong>Flechten</strong>, klare IE- und µg-Angabe, idealerweise in Öl. Merksatz: 1 µg entspricht 40 IE. Mit einer Mahlzeit einnehmen.</p></div>
@@ -709,21 +889,25 @@
           <div class="guide-block"><h4>Was „high polyphenol“ heißt</h4><p>Für den zugelassenen EU-Claim zum Schutz der Blutfette vor oxidativem Stress müssen 20 g Öl mindestens 5 mg Hydroxytyrosol und verwandte Verbindungen liefern. Ein Laborwert macht die Aussage überprüfbar.</p></div>
           <div class="guide-block"><h4>Mein Kaufcheck</h4><p>Extra nativ, aktuelle Ernte, konkrete Region und Produzent, dunkle Flasche oder Dose, kleines Gebinde und Polyphenol-Analyse mit Datum. Pfeffrigkeit ist ein guter Hinweis, aber kein Laborbericht.</p></div>
           <div class="guide-block"><h4>Frische schlägt Prestige</h4><p>Kühl, dunkel und gut verschlossen lagern; nach dem Öffnen zügig verbrauchen. Eine teure Designflasche ohne Erntejahr ist für mich kein Premiumprodukt.</p></div>
-          <div class="guide-block"><h4>Kein Supplement-Zwang</h4><p>Die Menge ersetzt anderes Fett und ergänzt eine gute Ernährung. Nicht zusätzlich literweise trinken, um einen Polyphenol-Score zu jagen — Energie bleibt Energie.</p></div>`,
+          <div class="guide-block"><h4>Kein Supplement-Zwang</h4><p>Die Menge ersetzt anderes Fett und ergänzt eine gute Ernährung. Nicht zusätzlich literweise trinken, um einen Polyphenol-Score zu jagen — Energie bleibt Energie.</p></div>
+          <div class="guide-block wide"><h4>Meine aktuelle High-Phenolic-Watchlist</h4><table class="dose-table"><thead><tr><th>Beispiel</th><th>Angegebener Wert</th><th>Meine Einordnung</th></tr></thead><tbody><tr><td><strong>PAMAKO Monovarietal Mountain Organic</strong></td><td>2025/26: ca. 2.090 mg/kg</td><td>Extrem hoher angegebener Wert; vor Kauf Zertifikat, Methode und konkrete Charge prüfen.</td></tr><tr><td><strong>The Governor Limited Edition</strong></td><td>2025/26: 1.316 mg/kg</td><td>Analyse 11/2025 mit Oleocanthal und Oleacein ausgewiesen; spannender Premium-Testkandidat.</td></tr><tr><td><strong>DELIBA High Polyphenol EVOO</strong></td><td>629 mg/kg</td><td>Weniger extrem, aber lab-verifiziert kommuniziert; interessant für Preis-Leistung.</td></tr></tbody></table><p class="guide-note">Werte sind ernte- und chargenabhängig, keine dauerhafte Garantie und noch kein persönliches YES-Verdict.</p></div>`,
         sources: [
           ["EFSA: Olive-oil polyphenols health claim", "https://www.efsa.europa.eu/en/efsajournal/pub/2033"],
-          ["EU Register: zugelassene Health Claims", "https://ec.europa.eu/food/food-feed-portal/screen/health-claims/eu-register"]
+          ["PAMAKO producer", "https://www.pamako.gr/"],
+          ["PAMAKO 2025/26 product listing", "https://www.amazon.com/Pamako-Ultra-Premium-Monovarietal-Award-Winner-Certified/dp/B08BG72BM8"],
+          ["The Governor 2025/26 product data", "https://thegovernorevoo.co.uk/products/the-governor-limited-edition-extra-virgin-olive-oil"],
+          ["DELIBA lab-verified product page", "https://delibaoliveoil.com/pages/high-polyphenol-olive-oil"]
         ]
       },
       mushrooms: {
-        title: "Funktionale Pilze",
-        tag: "curious pick",
+        title: "Lion’s Mane",
+        tag: "personal favorite",
         evidence: "Evidenz: früh / gemischt",
-        intro: "Lion’s Mane & Co. sind interessant, aber keine vegane Versorgungslücke. Hier darf die Produktqualität nicht stärker klingen als die Humanstudien.",
+        intro: "Ich feiere Lion’s Mane persönlich. Diese Begeisterung ist echt — aber sie ersetzt keine starke Humanstudie. Genau diese Trennung macht eine Empfehlung glaubwürdig.",
         dose: "Keine Standarddosis",
         doseNote: "Für gesunde Menschen gibt es derzeit keine allgemein etablierte tägliche Dosis mit ähnlich robuster Evidenz wie bei B12 oder Kreatin.",
         blocks: `
-          <div class="guide-block"><h4>Meine Einordnung</h4><p>Explorativ, nicht essentiell. Kleine Studien zu Lion’s Mane zeigen interessante Signale, andere randomisierte Studien finden keine klaren akuten Vorteile. Das reicht für Neugier — nicht für Heilsversprechen.</p></div>
+          <div class="guide-block"><h4>Meine Einordnung</h4><p><strong>Personal YES für das Thema, wissenschaftlich noch kein finales YES für ein bestimmtes Produkt.</strong> Kleine Studien zeigen interessante Signale, andere randomisierte Studien finden keine klaren akuten Vorteile.</p></div>
           <div class="guide-block"><h4>Wenn überhaupt kaufen</h4><p>Art und Pflanzenteil klar benannt, bevorzugt Fruchtkörper, Extraktionsverhältnis erklärt, Beta-Glucane quantitativ ausgewiesen und Prüfung auf Schwermetalle sowie Mikrobiologie.</p></div>
           <div class="guide-block"><h4>Marketing-Fallen</h4><p>„10:1“ ohne Ausgangsmenge, Myzel auf Getreide ohne Transparenz, nur „Polysaccharide“ statt Beta-Glucane und Proprietary Blends mit nicht genannten Mengen.</p></div>
           <div class="guide-block"><h4>Grenzen</h4><p>Keine Routineempfehlung für Schwangerschaft, Autoimmunerkrankungen, Blutverdünner oder vor Operationen ohne medizinische Rücksprache. Qualität und Wechselwirkungen sind produktspezifisch.</p></div>`,
@@ -731,24 +915,6 @@
           ["2025 review: Lion’s Mane and cognition", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12030463/"],
           ["2025 randomized acute trial", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12018234/"],
           ["2019 randomized controlled trial", "https://pubmed.ncbi.nlm.nih.gov/31413233/"]
-        ]
-      },
-      iodine: {
-        title: "Jod",
-        tag: "vegan blindspot",
-        evidence: "Evidenz: stark als Nährstoff",
-        intro: "Jod ist essentiell und bei veganer Ernährung leicht zu übersehen. Gleichzeitig kann unkontrolliertes Kelp sehr viel und sehr schwankend liefern.",
-        dose: "100 µg bei Lücke",
-        doseNote: "DGE-Position für Erwachsene bei unzureichender Zufuhr über jodiertes Salz und Lebensmittel: Supplement nach ärztlicher Rücksprache.",
-        blocks: `
-          <div class="guide-block"><h4>Erst die Basis prüfen</h4><p>Verwendest du regelmäßig jodiertes Speisesalz und kennst du die Jodmenge angereicherter Pflanzendrinks oder anderer Produkte? Die DGE nennt für Erwachsene einen Referenzwert von <strong>150 µg pro Tag</strong> aus allen Quellen.</p></div>
-          <div class="guide-block"><h4>Mein Default bei Lücke</h4><p>Wenn die Versorgung nicht zuverlässig ist, sind <strong>100 µg täglich</strong> aus einer präzise dosierten Quelle nachvollziehbarer als gelegentliche Algenportionen. Das ist kein Zusatz zu einer bereits hohen Jodzufuhr.</p></div>
-          <div class="guide-block"><h4>Kelp ist kein Messlöffel</h4><p>Der Jodgehalt von Meeresalgen schwankt extrem. Deshalb keine hoch dosierten Kelp-Produkte als Daily-Routine, wenn die tatsächliche Menge nicht sauber analysiert ist.</p></div>
-          <div class="guide-block"><h4>Schilddrüse mitdenken</h4><p>Bei Schilddrüsenerkrankung, Medikamenten, Schwangerschaft oder auffälligen Werten Dosierung vorher fachlich klären. Sowohl zu wenig als auch zu viel Jod kann problematisch sein.</p></div>`,
-        sources: [
-          ["DGE: Jod-Referenzwert", "https://www.dge.de/wissenschaft/referenzwerte/jod/"],
-          ["DGE 2024: Position zu veganer Ernährung", "https://www.dge.de/fileadmin/dok/wissenschaft/positionen/DGE_Position-statement_Update_vegan_nutrition_EU_2024_60-84.pdf"],
-          ["NIH ODS: Iodine factsheet", "https://ods.od.nih.gov/factsheets/Iodine-HealthProfessional/"]
         ]
       }
     };
@@ -797,7 +963,7 @@
       filters.forEach(item => item.classList.remove('active'));
       button.classList.add('active');
       const selected = button.dataset.filter;
-      cards.forEach(card => card.classList.toggle('hidden', selected !== 'all' && card.dataset.category !== selected));
+      cards.forEach(card => card.classList.toggle('hidden', selected !== 'all' && !card.dataset.category.split(' ').includes(selected)));
     }));
 
     const modal = document.getElementById('linkModal');
@@ -826,15 +992,6 @@
       }
     });
 
-    document.getElementById('signupForm').addEventListener('submit', event => {
-      event.preventDefault();
-      const email = document.getElementById('email').value.trim();
-      if (!email) return;
-      localStorage.setItem('stpls_interest_email', email);
-      document.querySelector('.input-row').style.display = 'none';
-      document.getElementById('formNote').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    });
   </script>
 </body>
 </html>

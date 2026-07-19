@@ -518,6 +518,32 @@
     .table-result { margin-top: 18px; color: var(--ink); font-size: 14px; font-weight: 800; opacity: 0; transition: opacity .3s .5s; }
     .tasting-table.activated .table-result { opacity: 1; }
 
+    /* Michael + Huong tier-list editorial placeholder */
+    .tier-teaser { overflow: hidden; background: #eceee6; }
+    .tier-episode { position: relative; display: grid; grid-template-columns: .82fr 1.18fr; gap: 22px; padding: clamp(24px,4vw,44px); border: 2px solid var(--ink); border-radius: 30px; background: var(--white); box-shadow: 12px 12px 0 var(--ink); }
+    .tier-episode::after { content: "BLIND\A TASTE"; white-space: pre; position: absolute; right: -11px; top: -25px; width: 96px; height: 96px; display: grid; place-items: center; border-radius: 50%; color: var(--ink); background: var(--acid); font: 700 10px/1.1 "DM Mono", monospace; text-align: center; transform: rotate(10deg); }
+    .episode-copy { padding: 9px 6px; }
+    .episode-pill { display: inline-flex; min-height: 29px; align-items: center; padding: 0 10px; border-radius: 999px; color: white; background: var(--orange); font: 600 8px "DM Mono", monospace; text-transform: uppercase; }
+    .episode-copy h3 { max-width: 520px; margin: 24px 0 13px; font-size: clamp(38px,5vw,67px); line-height: .93; letter-spacing: -.065em; }
+    .episode-copy > p { max-width: 510px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+    .couple-score { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 25px; }
+    .couple-score div { padding: 15px; border: 1px solid var(--line); border-radius: 15px; background: #f2f0e9; }
+    .couple-score small { display: block; margin-bottom: 7px; color: var(--muted); font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .couple-score strong { display: block; font-size: 17px; }
+    .couple-score span { display: block; margin-top: 6px; color: var(--orange); font-size: 11px; font-weight: 800; }
+    .tier-board { align-self: stretch; display: grid; gap: 7px; padding: 18px; border-radius: 22px; color: white; background: var(--ink); }
+    .tier-row { min-height: 63px; display: grid; grid-template-columns: 52px 1fr; gap: 9px; align-items: center; }
+    .tier-letter { height: 100%; display: grid; place-items: center; border-radius: 12px; color: var(--ink); background: var(--tier-color); font-size: 27px; font-weight: 900; }
+    .tier-slots { min-height: 100%; display: flex; align-items: center; gap: 7px; padding: 7px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: rgba(255,255,255,.06); }
+    .tier-ghost { width: 42px; height: 47px; display: grid; place-items: center; border: 1px dashed rgba(255,255,255,.3); border-radius: 10px 10px 14px 14px; color: rgba(255,255,255,.48); font: 700 9px "DM Mono", monospace; transform: rotate(var(--tilt,0deg)); }
+    .tier-lock { margin-left: auto; color: #aeb9b1; font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+    .tier-next { display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center; margin-top: 34px; padding: 24px 0 0; border-top: 1px solid var(--line); }
+    .tier-next strong { font-size: 18px; }
+    .tier-category-options { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+    .tier-category { min-height: 38px; padding: 0 13px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); background: transparent; font-size: 11px; font-weight: 800; cursor: pointer; }
+    .tier-category:hover, .tier-category.active { color: white; border-color: var(--ink); background: var(--ink); }
+    .tier-vote-result { min-height: 22px; margin: 12px 0 0; color: var(--muted); font-size: 12px; text-align: right; }
+
     @media (max-width: 980px) {
       .hero-grid, .manifesto-grid, .newsletter-box { grid-template-columns: 1fr; }
       .hero { min-height: auto; }
@@ -528,7 +554,7 @@
       .newsletter-box { gap: 25px; }
       .fit-glance { grid-template-columns: repeat(2, 1fr); }
       .fit-grid, .fit-cta { grid-template-columns: 1fr; }
-      .b12-lab, .brand-play { grid-template-columns: 1fr; }
+      .b12-lab, .brand-play, .tier-episode { grid-template-columns: 1fr; }
     }
     @media (max-width: 760px) {
       body { padding-bottom: 76px; }
@@ -558,6 +584,9 @@
       .verdict-grid { grid-template-columns: 1fr; }
       .verdict-card { min-height: 175px; }
       .table-steps { grid-template-columns: 1fr 1fr; }
+      .tier-next { grid-template-columns: 1fr; gap: 12px; }
+      .tier-category-options { justify-content: flex-start; }
+      .tier-vote-result { text-align: left; }
       .mobile-dock { position: fixed; left: 12px; right: 12px; bottom: 10px; z-index: 18; display: grid; grid-template-columns: repeat(3, 1fr); padding: 7px; border: 1px solid rgba(255,255,255,.13); border-radius: 18px; color: white; background: rgba(21,35,27,.94); box-shadow: 0 16px 40px rgba(21,35,27,.25); backdrop-filter: blur(16px); }
       .mobile-dock a { min-height: 46px; display: grid; place-items: center; border-radius: 12px; font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
       .mobile-dock a:nth-child(2) { color: var(--ink); background: var(--acid); }
@@ -600,6 +629,14 @@
       .guide-heading h3 { font-size: 44px; }
       .dose-card strong { font-size: 25px; }
       .dose-table { font-size: 10px; }
+      .tier-episode { padding: 22px 17px; box-shadow: 7px 7px 0 var(--ink); }
+      .tier-episode::after { right: -15px; top: -28px; width: 78px; height: 78px; font-size: 8px; }
+      .couple-score { grid-template-columns: 1fr; }
+      .tier-board { padding: 12px; }
+      .tier-row { grid-template-columns: 44px 1fr; min-height: 56px; }
+      .tier-letter { font-size: 22px; }
+      .tier-ghost { width: 35px; height: 40px; }
+      .tier-lock { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -898,7 +935,7 @@
             <article class="protein-card"><small>Dry weight</small><h3>Sojagranulat / TVP</h3><div class="protein-number">45–55 g</div><p>pro 100 g trocken · extrem effizient; nach dem Einweichen ist der Wert pro 100 g niedriger.</p></article>
           </div>
           <div class="protein-note"><span>Werte sind realistische Produktbereiche, keine exakten Angaben für jede Marke. Wasserreiche, getrocknete und geröstete Produkte nicht direkt vergleichen.</span><span>Quellen: <a href="https://www.blsdb.de/" target="_blank" rel="noopener">BLS ↗</a> · <a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA ↗</a> · <a href="https://www.koro.com/lude/geroestete-und-gesalzene-edamame-bohnen-750-g" target="_blank" rel="noopener">KoRo-Etikett ↗</a></span></div>
-          <div class="future-shelf" id="future-shelf"><strong>Next: Michael’s supermarket shelf</strong><p>Meine konkreten Lieblingsprodukte aus REWE, EDEKA, Bio Company, dm & Co. — mit Marke, Geschmack, Zutaten, Protein pro Portion, Preis, Protein pro Euro, „würde ich nachkaufen?“ und Kauf-/Affiliate-Link, wenn ich wirklich dahinterstehe.</p></div>
+          <div class="future-shelf" id="future-shelf"><strong>Next: Michael’s supermarket shelf</strong><p>Meine konkreten Lieblingsprodukte aus REWE, EDEKA, Bio Company, dm & Co. — mit Marke, Geschmack, Zutaten, Protein pro Portion, Preis, Protein pro Euro und „würde ich nachkaufen?“. Den ersten Vorgeschmack gibt es bei <a href="#tier-lists"><u>Michael + Huong rank everything vegan ↓</u></a></p></div>
         </div>
       </div>
     </section>
@@ -925,10 +962,50 @@
       </div>
     </section>
 
+    <section class="tier-teaser" id="tier-lists">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="section-no">07 / MICHAEL + HUONG RANK EVERYTHING VEGAN</span><h2>Two opinions.<br>One shopping cart.</h2></div>
+          <p class="section-copy">Blind tastings, ehrliche erste Reaktionen und genau eine Frage, die kein Marketing umgehen kann: Würden wir es mit unserem eigenen Geld wieder kaufen?</p>
+        </div>
+        <article class="tier-episode" aria-labelledby="tierEpisodeTitle">
+          <div class="episode-copy">
+            <span class="episode-pill">Episode 01 · Coming soon</span>
+            <h3 id="tierEpisodeTitle">The Great Soy Milk Blind Test.</h3>
+            <p>Mehrere Berliner Supermarkt-Sojadrinks treten anonym gegeneinander an: pur, im Kaffee und im Müsli. Marke und Preis werden erst nach unseren individuellen Verdicts aufgedeckt.</p>
+            <div class="couple-score">
+              <div><small>Michael judges</small><strong>Taste · value · protein</strong><span>Would I rebuy?</span></div>
+              <div><small>Huong judges</small><strong>Taste · texture · everyday use</strong><span>Would she rebuy?</span></div>
+            </div>
+          </div>
+          <div class="tier-board" aria-label="Vorschau auf das noch nicht veröffentlichte Sojamilch-Ranking">
+            <div class="tier-row"><div class="tier-letter" style="--tier-color:#d7ff58">S</div><div class="tier-slots"><span class="tier-ghost" style="--tilt:-4deg">?</span><span class="tier-lock">We would fight for the last one</span></div></div>
+            <div class="tier-row"><div class="tier-letter" style="--tier-color:#f3c97d">A</div><div class="tier-slots"><span class="tier-ghost" style="--tilt:3deg">?</span><span class="tier-ghost" style="--tilt:-2deg">?</span><span class="tier-lock">Definitely rebuy</span></div></div>
+            <div class="tier-row"><div class="tier-letter" style="--tier-color:#d9d2bf">B</div><div class="tier-slots"><span class="tier-ghost" style="--tilt:2deg">?</span><span class="tier-lock">Good, not true love</span></div></div>
+            <div class="tier-row"><div class="tier-letter" style="--tier-color:#c6d1c8">C</div><div class="tier-slots"><span class="tier-ghost" style="--tilt:-3deg">?</span><span class="tier-lock">Fine in an emergency</span></div></div>
+            <div class="tier-row"><div class="tier-letter" style="--tier-color:#ddaa98">F</div><div class="tier-slots"><span class="tier-ghost" style="--tilt:4deg">?</span><span class="tier-lock">We suffered so you don’t have to</span></div></div>
+          </div>
+        </article>
+        <div class="tier-next">
+          <strong>What should we rank after soy milk?</strong>
+          <div>
+            <div class="tier-category-options" role="group" aria-label="Nächste Tier-List auswählen">
+              <button class="tier-category" type="button">Tofu</button>
+              <button class="tier-category" type="button">Vegan cheese</button>
+              <button class="tier-category" type="button">Protein snacks</button>
+              <button class="tier-category" type="button">Ice cream</button>
+              <button class="tier-category" type="button">Creatine</button>
+            </div>
+            <p class="tier-vote-result" id="tierVoteResult" aria-live="polite">Choose responsibly. Our fridge has limited shelf space.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="frontier">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">07 / CONSCIOUS FRONTIER</span><h2>Fascinated.<br>Not careless.</h2></div>
+          <div><span class="section-no">08 / CONSCIOUS FRONTIER</span><h2>Fascinated.<br>Not careless.</h2></div>
           <p class="section-copy">LSD und Psilocybin faszinieren mich persönlich und wissenschaftlich. Gerade deshalb trenne ich Forschung, Legalität und kommerzielles Interesse sauber voneinander.</p>
         </div>
         <div class="not-list frontier-list">
@@ -942,7 +1019,7 @@
     <section id="culture">
       <div class="wrap">
         <div class="section-head">
-          <div><span class="section-no">08 / CULTURE SHELF</span><h2>Things I keep<br>returning to.</h2></div>
+          <div><span class="section-no">09 / CULTURE SHELF</span><h2>Things I keep<br>returning to.</h2></div>
           <p class="section-copy">Keine algorithmische Top-10-Liste. Bücher, Filme, Lehrer:innen und Dokumentationen, die etwas in mir bewegt oder meine Sicht auf die Welt erweitert haben.</p>
         </div>
         <div class="culture-grid">
@@ -959,7 +1036,7 @@
       <div class="wrap">
         <div class="vision-panel">
           <blockquote>Human flourishing. Planetary health. Conscious freedom. Love at scale.</blockquote>
-          <div class="vision-copy"><span class="mono">09 / MY NORTH STAR</span><p>Ich möchte Technologie, Produkte und Geschichten bauen, die Freiheit vergrößern, Leid reduzieren und Menschen helfen, bewusster zu leben — ohne den Planeten oder andere Lebewesen als Nebensache zu behandeln.</p><p>Education + technology + compassion.</p></div>
+          <div class="vision-copy"><span class="mono">10 / MY NORTH STAR</span><p>Ich möchte Technologie, Produkte und Geschichten bauen, die Freiheit vergrößern, Leid reduzieren und Menschen helfen, bewusster zu leben — ohne den Planeten oder andere Lebewesen als Nebensache zu behandeln.</p><p>Education + technology + compassion.</p></div>
         </div>
       </div>
     </section>
@@ -967,7 +1044,7 @@
     <section class="newsletter" id="partners">
       <div class="wrap">
         <div class="newsletter-box">
-          <div><span class="section-no" style="color:var(--acid)">10 / WORK WITH MICHAEL</span><h2>Let’s make<br>something useful.</h2><p><strong>Für AI-Teams:</strong> Ich bin in Berlin und offen für AI-Engineering-Rollen, Projekte und mission-driven collaborations.</p><p><strong>Für Hersteller:</strong> Schickt uns euer veganes Produkt. Wir testen es wenn möglich blind — mit echten ersten Reaktionen, individuellen Verdicts und verwertbarem Feedback.</p><div class="contact-actions"><a class="btn btn-acid" href="mailto:mikel_ninh@yahoo.de?subject=Zusammenarbeit%20mit%20Michael%20Ninh">E-Mail schreiben</a><a class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.45)" href="https://www.instagram.com/mikel.ninh/" target="_blank" rel="me noopener">Instagram DM ↗</a><a class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.45)" href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn ↗</a></div></div>
+          <div><span class="section-no" style="color:var(--acid)">11 / WORK WITH MICHAEL</span><h2>Let’s make<br>something useful.</h2><p><strong>Für AI-Teams:</strong> Ich bin in Berlin und offen für AI-Engineering-Rollen, Projekte und mission-driven collaborations.</p><p><strong>Für Hersteller:</strong> Schickt uns euer veganes Produkt. Wir testen es wenn möglich blind — mit echten ersten Reaktionen, individuellen Verdicts und verwertbarem Feedback.</p><div class="contact-actions"><a class="btn btn-acid" href="mailto:mikel_ninh@yahoo.de?subject=Zusammenarbeit%20mit%20Michael%20Ninh">E-Mail schreiben</a><a class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.45)" href="https://www.instagram.com/mikel.ninh/" target="_blank" rel="me noopener">Instagram DM ↗</a><a class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.45)" href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn ↗</a></div></div>
           <div class="partner-brief">
             <div><b>01</b><span>Produkt zuschicken + Ziel und konkrete Fragen nennen</span></div>
             <div><b>02</b><span>Blind Tasting, wenn Verpackung und Kontext neutralisierbar sind</span></div>
@@ -1014,7 +1091,7 @@
     <div class="wrap">
       <div class="footer-grid">
         <div class="footer-brand"><a class="brand" href="#top"><span class="brand-dot"></span>MICHAEL NINH.</a><p>AI Engineer, Civic-Tech-Builder und veganer Foodie in Berlin. Nützliche Systeme, ehrliche Empfehlungen und eine menschlichere Zukunft.</p></div>
-        <div class="footer-col"><strong>Explore</strong><a href="#work">Selected work</a><a href="#stack">Vegan staples</a><a href="#culture">Inspiration</a><a href="#partners">Blind tastings</a></div>
+        <div class="footer-col"><strong>Explore</strong><a href="#work">Selected work</a><a href="#stack">Vegan staples</a><a href="#tier-lists">Michael + Huong tier lists</a><a href="#culture">Inspiration</a><a href="#partners">Blind tastings</a></div>
         <div class="footer-col"><strong>Connect</strong><a href="mailto:mikel_ninh@yahoo.de">E-Mail</a><a href="https://de.linkedin.com/in/michael-ninh" target="_blank" rel="me noopener">LinkedIn ↗</a><a href="https://github.com/mikelninh" target="_blank" rel="me noopener">GitHub ↗</a><a href="https://www.instagram.com/mikel.ninh/" target="_blank" rel="me noopener">@mikel.ninh ↗</a></div>
       </div>
       <div class="legal">Berlin · mikel_ninh@yahoo.de · Transparenz: Mit * markierte Links können Affiliate-Links sein; der Preis bleibt gleich. Persönliche Empfehlungen, keine medizinische Beratung. Nahrungsergänzungsmittel ersetzen keine ausgewogene Ernährung. Impressum und Datenschutz vor breiter kommerzieller Veröffentlichung ergänzen.</div>
@@ -1330,6 +1407,7 @@
       stack: 'Vegan staples',
       protein: 'Protein, actually food',
       standard: 'The Table Test',
+      'tier-lists': 'Michael + Huong rank vegan',
       frontier: 'Conscious frontier',
       culture: 'Inspiration shelf',
       vision: 'North star',
@@ -1426,6 +1504,18 @@
       card.addEventListener('click', () => {
         const revealed = card.classList.toggle('revealed');
         card.setAttribute('aria-pressed', String(revealed));
+      });
+    });
+
+    const tierVoteResult = document.getElementById('tierVoteResult');
+    document.querySelectorAll('.tier-category').forEach(button => {
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tier-category').forEach(option => {
+          option.classList.toggle('active', option === button);
+          option.setAttribute('aria-pressed', String(option === button));
+        });
+        tierVoteResult.textContent = `${button.textContent} noted. This is not yet a democracy, but Huong has been informed.`;
       });
     });
 
